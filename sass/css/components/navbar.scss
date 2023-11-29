@@ -1,0 +1,93 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+nav {
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+
+	padding: functions.rem(15);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 5;
+
+	background-color: map.get(theme.$colors, main);
+
+	> img {
+		height: functions.rem(30);
+		width: auto;
+
+		margin-right: auto;
+	}
+
+	> .opener {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+
+		height: functions.rem(24);
+		width: functions.rem(24);
+
+		border: 0px solid transparent;
+
+		overflow: hidden;
+
+		cursor: pointer;
+
+		> span {
+			display: flex;
+
+			height: 2px;
+			width: 100%;
+
+			background-color: white;
+
+			position: relative;
+
+			right: 0;
+
+			&::before {
+				content: "";
+
+				display: flex;
+
+				position: absolute;
+
+				right: functions.rem(32);
+
+				height: 2px;
+				width: 100%;
+
+				background-color: white;
+			}
+
+			&:nth-child(1) {
+				transition: right 125ms linear 0ms;
+			}
+
+			&:nth-child(2) {
+				transition: right 125ms linear 50ms;
+			}
+
+			&:nth-child(3) {
+				transition: right 125ms linear 100ms;
+				width: 65%;
+
+				&::before {
+					right: functions.rem(32);
+				}
+			}
+		}
+
+		&:hover {
+			> span {
+				right: functions.rem(-32);
+			}
+		}
+	}
+}

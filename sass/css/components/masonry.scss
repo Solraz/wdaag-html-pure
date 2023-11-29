@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+.masonry {
+	width: 100%;
+	min-height: 600px;
+}

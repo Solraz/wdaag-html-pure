@@ -1,0 +1,68 @@
+@use "sass:map";
+@use "theme";
+
+@font-face {
+	font-family: "Roboto";
+	src: url("/fonts/RobotoFlex.ttf") format("truetype");
+}
+
+@mixin Roboto {
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	@include Roboto;
+	font-size: 16px;
+
+	@media (min-width: 1920px) {
+		font-size: 0.8333vw;
+	}
+}
+
+$sizes: map.get(theme.$fonts, sizes);
+
+@for $i from 1 through 6 {
+	h#{$i},
+	.h#{$i} {
+		$size: map.get($sizes, h#{$i});
+
+		$sizemin: $size + rem;
+		$sizevw: $size * 1.25 + vw;
+		$fluid: calc($sizevw + ($sizemin * 1));
+		$sizemax: calc($size * 1.25) + rem;
+
+		font-size: clamp($sizemin, $fluid, $sizemax);
+		line-height: clamp($sizemin * 1.125, $fluid * 1.125, $sizemax * 1.125);
+		letter-spacing: calc(0.1 / $i) + rem;
+
+		@if ($i == 1) {
+			font-weight: 500;
+		} @else {
+			font-weight: 350;
+		}
+	}
+
+	@if ($i == 4) {
+		span,
+		p,
+		li,
+		div {
+			$size: map.get($sizes, h#{$i});
+
+			$sizemin: $size + rem;
+			$sizevw: $size * 1.25 + vw;
+			$fluid: calc($sizevw + ($sizemin * 1));
+			$sizemax: calc($size * 1.25) + rem;
+
+			font-size: clamp($sizemin, $fluid, $sizemax);
+			line-height: clamp($sizemin * 1.125, $fluid * 1.125, $sizemax * 1.125);
+			letter-spacing: calc(0.1 / $i) + rem;
+
+			font-weight: 300;
+		}
+	}
+}
+
+strong {
+	font-weight: 800;
+}

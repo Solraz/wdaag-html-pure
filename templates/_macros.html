@@ -1,0 +1,20 @@
+{% macro head() %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+	{% if page.title %}
+	{{ page.title }}
+	{% else %}
+	{{ config.title }}
+	{%endif %}
+</title>
+
+<link rel="shortcut icon" href="{{ get_url(path='img/favicon.png') }}" type="image/png">
+
+<link rel="stylesheet" href="{{ get_url(path='css/style.css') }}" />
+{% endmacro head %}
+
+
+{% macro scripts() %}
+<script src="{{ get_url(path='js/scripts.js') }}" type="module"></script>
+{% endmacro scripts %}

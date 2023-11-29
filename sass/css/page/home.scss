@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+.services {
+	display: flex;
+	padding: functions.rem(25) 0 functions.rem(100);
+
+	> .content-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(functions.rem(200), 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
+
+		gap: functions.rem(40);
+
+		justify-content: start;
+		align-items: start;
+	}
+
+	card {
+		display: flex;
+		flex-flow: column;
+	}
+}

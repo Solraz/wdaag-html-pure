@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: max(80vh, functions.rem(600));
+	width: 100%;
+
+	position: relative;
+
+	.callout {
+		display: flex;
+		flex-flow: column;
+
+		gap: functions.rem(25);
+		width: clamp(functions.rem(500), 50%, functions.rem(1000));
+
+		h2 {
+			font-weight: 200;
+		}
+	}
+}
