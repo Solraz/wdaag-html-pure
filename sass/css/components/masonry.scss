@@ -5,4 +5,57 @@
 .masonry {
 	width: 100%;
 	min-height: 600px;
+
+	display: flex;
+
+	> .content-wrapper {
+		display: flex;
+	}
+}
+
+masonry-perfect {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(functions.rem(320), 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(1fr, 2fr));
+	row-gap: functions.rem(8);
+	column-gap: functions.rem(16);
+
+	width: 100%;
+
+	masonry-brick {
+		display: flex;
+		min-width: functions.rem(250);
+		min-height: functions.rem(300);
+
+		masonry-content {
+			display: flex;
+			flex-flow: column;
+
+			width: 100%;
+
+			position: relative;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				min-height: functions.rem(300);
+				height: auto;
+			}
+
+			.description {
+				display: flex;
+				flex-flow: column;
+				align-items: start;
+				justify-content: end;
+
+				padding: functions.rem(10);
+
+				height: 100%;
+				width: 100%;
+				position: absolute;
+
+				display: none;
+			}
+		}
+	}
 }
