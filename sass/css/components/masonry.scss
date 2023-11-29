@@ -17,7 +17,7 @@ masonry-perfect {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(functions.rem(320), 1fr));
 	grid-template-rows: repeat(auto-fill, minmax(1fr, 2fr));
-	row-gap: functions.rem(8);
+	row-gap: functions.rem(16);
 	column-gap: functions.rem(16);
 
 	width: 100%;
