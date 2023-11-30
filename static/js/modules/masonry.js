@@ -1,12 +1,14 @@
 const resize_masonry_item = (item) => {
-	let grid = document.querySelector(`masonry-perfect`);
+	let grid = document.querySelector(`masonry-vertical`);
 
 	let rowGap = parseInt(
 		window.getComputedStyle(grid).getPropertyValue("row-gap")
 	);
 
 	let rowSpan = Math.ceil(
-		item.querySelector("masonry-content > img").getBoundingClientRect().height /
+		(item.querySelector("masonry-content > img").getBoundingClientRect()
+			.height +
+			rowGap) /
 			rowGap
 	);
 

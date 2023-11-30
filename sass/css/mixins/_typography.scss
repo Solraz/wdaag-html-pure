@@ -2,12 +2,18 @@
 @use "theme";
 
 @font-face {
-	font-family: "Roboto";
-	src: url("/fonts/RobotoFlex.ttf") format("truetype");
+	font-family: "Urbanist";
+	src: url("/fonts/Urbanist.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Urbanist";
+	font-style: italic;
+	src: url("/fonts/Urbanist-Italic.ttf") format("truetype");
 }
 
 @mixin Roboto {
-	font-family: "Roboto", sans-serif;
+	font-family: "Urbanist", sans-serif;
 }
 
 body {

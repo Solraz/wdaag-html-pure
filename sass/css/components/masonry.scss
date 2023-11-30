@@ -4,7 +4,7 @@
 
 .masonry {
 	width: 100%;
-	min-height: 600px;
+	padding: functions.rem(40) 0;
 
 	display: flex;
 
@@ -13,7 +13,7 @@
 	}
 }
 
-masonry-perfect {
+masonry-vertical {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(functions.rem(320), 1fr));
 	grid-template-rows: repeat(auto-fill, minmax(1fr, 2fr));
