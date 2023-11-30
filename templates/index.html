@@ -7,10 +7,11 @@
 {% endblock custom_style %}
 
 {% block background %}
-<div class="background-wrapper">
+<div class="background-wrapper-fixed">
   <div class="mirror"></div>
   <div class="content">
-    {% include "components/gradient.html" %}
+    <img src="{{get_url(path='img/blob-full.webp')}}" alt="">
+    <img src="{{get_url(path='img/blob-half.webp')}}" alt="">
   </div>
 </div>
 {% endblock background %}
@@ -32,29 +33,36 @@
 {% block content %}
 <div class="services">
   <div class="content-wrapper">
-    <div class="card">
-      <h3 class="title"><strong>Design</strong></h3>
-      <p class="text">Somos um estúdio de criação especializado em comunicação visual, ilustração e projetos gráficos 2D
-        e
-        3D</p>
+    <div class="title">
+      <h1>O que fazemos</h1>
+      <divider-horizontal></divider-horizontal>
     </div>
-    <div class="card">
-      <h3 class="title"><strong>Marketing Digital</strong></h3>
-      <p class="text">Mais do que uma agência digital, nossa proposta é atuar como o time de marketing do seu negócio.
-        Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
-    </div>
-    <div class="card">
-      <h3 class="title"><strong>UX / UI Design</strong></h3>
-      <p class="text">Desenvolvemos ambientes e produtos através do estudo da usabilidade e experiência do usuário
-        final.
-        Planejamos soluções e interações que promovem engajamento, conexão e conversão.</p>
-    </div>
-    <div class="card">
-      <h3 class="title"><strong>Desenvolvimento</strong></h3>
-      <p class="text">Materializamos as suas ideias. <br />
-        Seja um e-commerce, um site ou aplicativo, nossa equipe atuará no planejamento, na concepção e no
-        desenvolvimento
-        através de metodologias ágeis e emergentes.</p>
+    <div class="content">
+      <div class="card">
+        <h2 class="title"><strong>Design</strong></h2>
+        <p class="text">Somos um estúdio de criação especializado em comunicação visual, ilustração e projetos gráficos
+          2D
+          e
+          3D</p>
+      </div>
+      <div class="card">
+        <h2 class="title"><strong>Marketing Digital</strong></h2>
+        <p class="text">Mais do que uma agência digital, nossa proposta é atuar como o time de marketing do seu negócio.
+          Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
+      </div>
+      <div class="card">
+        <h2 class="title"><strong>UX / UI Design</strong></h2>
+        <p class="text">Desenvolvemos ambientes e produtos através do estudo da usabilidade e experiência do usuário
+          final.
+          Planejamos soluções e interações que promovem engajamento, conexão e conversão.</p>
+      </div>
+      <div class="card">
+        <h2 class="title"><strong>Desenvolvimento</strong></h2>
+        <p class="text">Materializamos as suas ideias. <br />
+          Seja um e-commerce, um site ou aplicativo, nossa equipe atuará no planejamento, na concepção e no
+          desenvolvimento
+          através de metodologias ágeis e emergentes.</p>
+      </div>
     </div>
   </div>
 </div>

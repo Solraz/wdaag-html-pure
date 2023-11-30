@@ -11,7 +11,7 @@ const lazy_images = () => {
 
 				intersection.unobserve(image);
 
-				image.parentElement.querySelector(".skeleton").remove();
+				image.parentElement.querySelector(".skeleton")?.remove();
 			}
 		}
 	});

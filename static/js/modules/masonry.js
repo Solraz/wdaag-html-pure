@@ -1,18 +1,18 @@
 const resize_masonry_item = (item) => {
-	let grid = document.querySelector(`masonry-vertical`);
+	let masonry = document.querySelector(`masonry-vertical`);
 
-	let rowGap = parseInt(
-		window.getComputedStyle(grid).getPropertyValue("row-gap")
+	let row_gap = parseInt(
+		window.getComputedStyle(masonry).getPropertyValue("row-gap")
 	);
 
-	let rowSpan = Math.ceil(
+	let row_span = Math.ceil(
 		(item.querySelector("masonry-content > img").getBoundingClientRect()
 			.height +
-			rowGap) /
-			rowGap
+			row_gap) /
+			row_gap
 	);
 
-	item.style.gridRowEnd = "span " + rowSpan;
+	item.style.gridRowEnd = "span " + row_span;
 };
 
 const resize_all_masonry_items = () => {
@@ -23,11 +23,27 @@ const resize_all_masonry_items = () => {
 	}
 };
 
-// const wait_for_images = () => {
-// 	let all_masonry_bricks = document.querySelectorAll("masonry-brick");
+const masonry_interaction = () => {
+	let masonry = document.querySelector(`masonry-vertical`),
+		masonry_bricks = masonry.querySelectorAll(`masonry-content`);
 
-// 	for (var i = 0; i < all_masonry_bricks.length; i++) {
-// 	}
-// };
+	masonry.addEventListener("mouseleave", () => {
+		for (const m of masonry_bricks) {
+			m.addEventListener("mouseleave", () => {
+				m.classList.remove("active");
+			});
+		}
+	});
 
-export { resize_masonry_item, resize_all_masonry_items };
+	for (const m of masonry_bricks) {
+		m.addEventListener("mouseenter", () => {
+			m.classList.add("active");
+		});
+
+		m.addEventListener("mouseleave", () => {
+			m.classList.remove("active");
+		});
+	}
+};
+
+export { resize_masonry_item, resize_all_masonry_items, masonry_interaction };

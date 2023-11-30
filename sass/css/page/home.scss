@@ -7,6 +7,23 @@
 	padding: functions.rem(25) 0 functions.rem(100);
 
 	> .content-wrapper {
+		flex-flow: column;
+		gap: functions.rem(25);
+	}
+
+	> .content-wrapper > .title {
+		display: flex;
+		flex-flow: column;
+		gap: functions.rem(15);
+		z-index: 2;
+
+		> divider-horizontal {
+			width: functions.rem(300);
+			z-index: 1;
+		}
+	}
+
+	> .content-wrapper > .content {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(functions.rem(200), 1fr));
 		grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
