@@ -1,13 +1,19 @@
 /public
+public/
+public
 
 .git
-
 /git
-
+git/
+git
 .github
 
 /node_modules
+node_modules
+node_modules/
 
 bun.lockb
 
 /media
+media
+media/
