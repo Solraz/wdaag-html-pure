@@ -34,8 +34,21 @@
 		align-items: start;
 	}
 
-	card {
+	.card {
 		display: flex;
 		flex-flow: column;
+
+		.leads {
+			display: flex;
+			flex-flow: column;
+
+			margin-top: functions.rem(15);
+
+			p {
+				font-weight: 500;
+
+				cursor: pointer;
+			}
+		}
 	}
 }

@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+footer {
+	background-color: map.get(theme.$colors, black);
+	padding: functions.rem(15) 0;
+
+	.content-wrapper {
+		flex-flow: column;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+		grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
+
+		.contact {
+			display: flex;
+			flex-flow: column;
+
+			.social-media {
+				display: flex;
+				justify-content: start;
+				align-items: center;
+				gap: functions.rem(10);
+
+				img {
+					object-fit: cover;
+					height: functions.rem(24);
+					width: auto;
+				}
+			}
+		}
+	}
+}

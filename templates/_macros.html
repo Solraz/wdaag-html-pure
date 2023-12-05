@@ -12,8 +12,36 @@
 <link rel="shortcut icon" href="{{ get_url(path='img/favicon.webp') }}" type="image/png">
 
 <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}" />
+<link rel="stylesheet" href="{{ get_url(path='css/components/footer.css') }}" />
 {% endmacro head %}
 
+{% macro footer() %}
+<footer>
+	<div class="content-wrapper">
+		<div class="footer-location">
+			<h3>RIO /</h3>
+			<h4>Rua Visconde de Pirajá, 414 / Sala 718</h4>
+			<h4>Ipanema</h4>
+		</div>
+		<div class="footer-content">
+			<div class="contact">
+				<h4>21 2027-4225</h4>
+				<div class="social-media">
+					<img src="{{ get_url(path='img/facebook-white.svg') }}" alt="">
+					<img src="{{ get_url(path='img/instagram-white.svg') }}" alt="">
+					<img src="{{ get_url(path='img/whatsapp-white.svg') }}" alt="">
+					<img src="{{ get_url(path='img/phone-flip-solid-white.svg') }}" alt="">
+				</div>
+			</div>
+			<div class="menu"></div>
+			<div class="other-topics"></div>
+			<div class="orcamento">
+				<button>Orçamento <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endmacro footer %}
 
 {% macro scripts() %}
 <script src="{{ get_url(path='js/htmx.js') }}" type="module"></script>

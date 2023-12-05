@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<main>
+	<main id="main">
 		{% include "components/menu.html" %}
 
 		{% block background %}
@@ -22,6 +22,8 @@
 		{% block content %}
 		{% endblock content %}
 	</main>
+
+	{{ macros::footer() }}
 
 	{{ macros::scripts() }}
 

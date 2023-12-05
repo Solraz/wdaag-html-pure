@@ -4,12 +4,15 @@ const resize_masonry_item = (item) => {
 	let row_gap = parseInt(
 		window.getComputedStyle(masonry).getPropertyValue("row-gap")
 	);
+	let row_height = parseInt(
+		window.getComputedStyle(masonry).getPropertyValue("grid-template-rows")
+	);
 
 	let row_span = Math.ceil(
 		(item.querySelector("masonry-content > img").getBoundingClientRect()
 			.height +
 			row_gap) /
-			row_gap
+			(row_gap + row_height)
 	);
 
 	item.style.gridRowEnd = "span " + row_span;

@@ -27,7 +27,7 @@ body {
 
 $sizes: map.get(theme.$fonts, sizes);
 
-@for $i from 1 through 6 {
+@for $i from 0 through 6 {
 	h#{$i},
 	.h#{$i} {
 		$size: map.get($sizes, h#{$i});
@@ -41,7 +41,7 @@ $sizes: map.get(theme.$fonts, sizes);
 		line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
 		letter-spacing: calc(0.1 / $i) + rem;
 
-		@if ($i == 1) {
+		@if ($i == 1 or $i == 0) {
 			line-height: clamp($sizemin * 1.1, $fluid * 1.1, $sizemax * 1.1);
 			font-weight: 500;
 		} @else {
@@ -65,7 +65,7 @@ $sizes: map.get(theme.$fonts, sizes);
 			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
 			letter-spacing: calc(0.1 / $i) + rem;
 
-			font-weight: 400;
+			font-weight: 300;
 		}
 	}
 }

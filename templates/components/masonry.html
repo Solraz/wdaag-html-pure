@@ -1,110 +1,137 @@
 <div class="masonry">
-  <div class="content-wrapper bigger">
-    <masonry-vertical>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-logo.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-      <masonry-brick>
-        <masonry-content>
-          <div class="skeleton"></div>
-          <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup.webp') }}" alt="">
-          <div class="extra">
-            <img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="">
-            <div class="description">
-              <h2>Title</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptatibus.</p>
-            </div>
-          </div>
-        </masonry-content>
-      </masonry-brick>
-    </masonry-vertical>
-  </div>
+	<div class="content-wrapper">
+		<masonry-vertical>
+			<masonry-brick class="">
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/romario/romario-senador-portfolio.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/romario/romario-senador-backdrop.webp') }}" alt="" />
+						<div class="description" hx-get="/romario" hx-trigger="click throttle:500ms" hx-target="main#main"
+							hx-swap="outerHTML swap:1s">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick class="x2">
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/sou-mais/sou-mais-portfolio.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/sou-mais/sou-mais-backdrop.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick class="">
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/patricia-pillar/patricia-pillar-portfolio.webp') }}"
+						alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/patricia-pillar/patricia-pillar-backdrop.webp') }}"
+							alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick>
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick>
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick class="x2-horizontal">
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/capsule-one/capsule-one-portfolio.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/capsule-one/capsule-one-backdrop.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick>
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			<masonry-brick>
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup.webp') }}" alt="" />
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='img/filha-da-terra/filha-da-terra-mockup-2.webp') }}" alt="" />
+						<div class="description">
+							<h3>Title</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Facilis, voluptatibus.
+							</p>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+		</masonry-vertical>
+	</div>
 </div>
