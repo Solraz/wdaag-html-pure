@@ -2,8 +2,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>
-	{% if page.title %}
-	{{ page.title }}
+	{% if section.title %}
+	{% if section.page.title %}
+	{{section.page.title }}
+	{% else %}
+	{{ section.title }}
+	{% endif %}
 	{% else %}
 	{{ config.title }}
 	{%endif %}
@@ -11,8 +15,7 @@
 
 <link rel="shortcut icon" href="{{ get_url(path='img/favicon.webp') }}" type="image/png">
 
-<link rel="stylesheet" href="{{ get_url(path='css/style.css') }}" />
-<link rel="stylesheet" href="{{ get_url(path='css/components/footer.css') }}" />
+<link rel="stylesheet" href="{{ get_url(path='css/style_v1.css') }}" />
 {% endmacro head %}
 
 {% macro footer() %}
@@ -32,9 +35,22 @@
 					<img src="{{ get_url(path='img/whatsapp-white.svg') }}" alt="">
 					<img src="{{ get_url(path='img/phone-flip-solid-white.svg') }}" alt="">
 				</div>
+				<h6>Política de Privacidade</h6>
+				<h6>© 2023 WDA Agência Digital</h6>
 			</div>
-			<div class="menu"></div>
-			<div class="other-topics"></div>
+			<div class="menu">
+				<p>cases</p>
+				<p>o que fazemos</p>
+				<p>sobre</p>
+				<p>orçamento</p>
+				<p>vagas</p>
+			</div>
+			<div class="other-topics">
+				<p>marketing</p>
+				<p>design</p>
+				<p>ux/ui design</p>
+				<p>desenvolvimento</p>
+			</div>
 			<div class="orcamento">
 				<button>Orçamento <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
 			</div>
@@ -45,5 +61,6 @@
 
 {% macro scripts() %}
 <script src="{{ get_url(path='js/htmx.js') }}" type="module"></script>
+<script src="{{ get_url(path='js/multi-swap.js') }}" type="module"></script>
 <script src="{{ get_url(path='js/scripts.js') }}" type="module"></script>
 {% endmacro scripts %}

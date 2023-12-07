@@ -17,10 +17,11 @@ banner {
 		flex-flow: column;
 
 		gap: functions.rem(25);
-		width: clamp(functions.rem(500), 50%, functions.rem(1000));
+		width: clamp(functions.rem(768), 75%, functions.rem(1280));
 
-		h2 {
-			font-weight: 200;
+		h3 {
+			font-weight: 300;
+			font-variant: all-small-caps;
 		}
 	}
 }

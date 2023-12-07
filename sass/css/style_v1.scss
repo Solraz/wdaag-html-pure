@@ -1,0 +1,10 @@
+@use "mixins/bootstrap";
+@use "mixins/typography";
+
+@use "components/navbar";
+@use "components/banner";
+@use "components/masonry";
+@use "components/footer";
+
+@use "page/home";
+@use "page/specialties";

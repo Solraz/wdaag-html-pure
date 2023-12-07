@@ -1,0 +1,55 @@
+{% set number = nth - 1 %}
+<section class="sales-pitch">
+  <div class="content-wrapper">
+    <div class="sticky">
+      {% for sticky in section.extra.sticky[number] %}
+
+      {% if loop.first %}
+
+      <h1>{{sticky | safe}}</h1>
+
+      {% else %}
+
+      {% if loop.last and sticky == "button" %}
+
+      <div>
+        <button>Entre em contato conosco <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
+      </div>
+
+      {% endif %}
+
+      {% if sticky is string and sticky != "button" %}
+
+      <p>{{sticky | safe}}</p>
+
+      {% endif %}
+
+      {% if sticky is iterable %}
+
+      <{{sticky[0]}}>{{sticky[1]}}</{{sticky[0]}}>
+
+      {% endif %}
+
+      {% endif %}
+
+      {% endfor %}
+    </div>
+    <div class="sales-body">
+      {% for floating in section.extra.floating[number] %}
+
+      {% if floating is string %}
+
+      <p>{{floating | safe}}</p>
+
+      {% endif %}
+
+      {% if floating is iterable %}
+
+      <{{floating[0]}}>{{floating[1] | safe}}</{{floating[0]}}>
+
+      {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

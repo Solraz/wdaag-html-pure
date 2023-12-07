@@ -3,21 +3,32 @@
 @use "../mixins/theme";
 
 footer {
+	display: flex;
+
 	background-color: map.get(theme.$colors, black);
-	padding: functions.rem(15) 0;
+	padding: functions.rem(25) 0 functions.rem(100);
 
 	.content-wrapper {
 		flex-flow: column;
+		gap: functions.rem(25);
 	}
 
 	.footer-content {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-		grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: functions.rem(25);
+
+		> div {
+			min-width: functions.rem(200);
+		}
 
 		.contact {
 			display: flex;
 			flex-flow: column;
+			gap: functions.rem(10);
 
 			.social-media {
 				display: flex;
@@ -31,6 +42,14 @@ footer {
 					width: auto;
 				}
 			}
+		}
+
+		.menu > p {
+			font-weight: 500;
+		}
+
+		.other-topics > p {
+			font-weight: 500;
 		}
 	}
 }

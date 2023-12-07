@@ -5,12 +5,14 @@
 <head>
 	{{ macros::head() }}
 
-	{% block custom_style %}
-	{% endblock custom_style %}
 </head>
 
 <body>
+	{% block custom_style %}
+	{% endblock custom_style %}
+
 	<main id="main">
+
 		{% include "components/menu.html" %}
 
 		{% block background %}

@@ -16,7 +16,7 @@ body {
 .content-wrapper {
 	display: flex;
 
-	width: clamp(functions.rem(768), 90vw, functions.rem(1280));
+	width: clamp(functions.rem(320), 90vw, functions.rem(1280));
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
@@ -27,16 +27,20 @@ body {
 	}
 }
 
-main.htmx-swapping {
-	opacity: 0;
-	transition: opacity 1s ease-out;
-}
-main.htmx-added {
+body.htmx-swapping > main {
 	opacity: 0;
 }
-main {
+body.htmx-added > main {
+	opacity: 0;
+}
+body > main {
 	opacity: 1;
-	transition: opacity 1s ease-out;
+	transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+[hx-get],
+[hx-post] {
+	cursor: pointer;
 }
 
 .background-wrapper-fixed {
@@ -49,10 +53,10 @@ main {
 	width: 100%;
 	height: 200%;
 
-	overflow: hidden;
-
 	animation: background-fade-in 2500ms ease-out;
 	animation-fill-mode: forwards;
+
+	overflow: hidden;
 
 	.mirror {
 		position: absolute;
@@ -60,9 +64,9 @@ main {
 		z-index: 2;
 
 		width: 100%;
-		height: 300%;
+		height: 100%;
 
-		backdrop-filter: saturate(0.9) blur(functions.rem(100)) opacity(1);
+		backdrop-filter: saturate(0.9) blur(functions.rem(75)) opacity(1);
 	}
 
 	.content {
@@ -83,15 +87,18 @@ main {
 			height: auto;
 
 			&:nth-of-type(1) {
-				transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+				// transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
 				top: 12.5%;
 				left: 7.5%;
 
-				animation: rotate-blob-1 5000ms linear infinite;
+				// animation: rotate-blob-1 5000ms linear infinite;
+				// animation-fill-mode: forwards;
+
+				animation: blob-breathe 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					infinite;
 			}
 
 			&:nth-of-type(2) {
-				transform: rotate3d(0, 0, 1, 180deg);
 				right: 7.5%;
 				top: 45%;
 
@@ -100,7 +107,11 @@ main {
 					left: 7.5%;
 				}
 
-				animation: rotate-blob-2 5000ms linear infinite;
+				// animation: rotate-blob-2 5000ms linear infinite;
+				// animation-fill-mode: both;
+
+				animation: blob-breathe 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+					infinite;
 			}
 		}
 	}
@@ -117,25 +128,37 @@ main {
 
 @keyframes rotate-blob-1 {
 	0% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
 	}
 	50% {
 		transform: rotate3d(0, 1, 0, -7deg) scale3d(1.1, 1.1, 1.1);
 	}
 	100% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
 	}
 }
 
 @keyframes rotate-blob-2 {
 	0% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
 	}
 	50% {
 		transform: rotate3d(0, 1, 0, 7deg) scale3d(1.1, 1.1, 1.1);
 	}
 	100% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
+	}
+}
+
+@keyframes blob-breathe {
+	0% {
+		transform: scale(0.8);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0.8);
 	}
 }
 
@@ -144,7 +167,6 @@ main {
 	justify-content: end;
 	align-items: center;
 
-	overflow: hidden;
 	position: absolute;
 
 	width: 100%;
@@ -192,4 +214,29 @@ divider-horizontal {
 	width: 100%;
 	height: functions.rem(3);
 	background-color: map.get(theme.$colors, white);
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: functions.rem(15);
+
+	padding: functions.rem(12) functions.rem(25);
+
+	background-color: map.get(theme.$colors, primary);
+	border: functions.rem(1) solid map.get(theme.$colors, primary);
+	color: map.get(theme.$colors, white);
+
+	cursor: pointer;
+}
+
+mark {
+	background-color: map.get(theme.$colors, primary);
+	color: map.get(theme.$colors, white);
+	padding: functions.rem(2) functions.rem(7) functions.rem(4);
+}
+
+::marker {
+	color: map.get(theme.$colors, primary);
 }

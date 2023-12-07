@@ -1,0 +1,101 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+banner.specialties {
+	height: max(50vh, functions.rem(600));
+
+	.content-wrapper {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		h3 {
+			font-variant: normal;
+		}
+	}
+}
+
+.specialties-content {
+	background-color: map.get(theme.$colors, white);
+	color: map.get(theme.$colors, main);
+
+	section {
+		padding: functions.rem(40) functions.rem(10) functions.rem(50);
+
+		&.callout {
+			background-color: map.get(theme.$colors, grey);
+			text-align: center;
+
+			.content-wrapper {
+				flex-flow: column;
+				gap: functions.rem(24);
+				width: clamp(functions.rem(320), 90vw, functions.rem(960));
+			}
+		}
+
+		&.sales-pitch {
+			.content-wrapper {
+				flex-flow: row;
+				flex-wrap: wrap;
+				align-items: start;
+				justify-content: center;
+				gap: functions.rem(24);
+
+				position: relative;
+
+				> div {
+					width: max(functions.rem(296), calc(50% - functions.rem(24)));
+
+					@media (max-width: functions.rem(737)) {
+						width: 100%;
+					}
+				}
+			}
+
+			.sticky {
+				display: flex;
+				flex-flow: column;
+				gap: functions.rem(24);
+
+				position: sticky;
+				top: functions.rem(72);
+
+				@media (max-width: functions.rem(737)) {
+					position: relative;
+					top: 0;
+				}
+			}
+
+			.sales-body {
+				display: flex;
+				flex-flow: column;
+				gap: functions.rem(24);
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-flow: column;
+			gap: functions.rem(32);
+
+			margin-left: functions.rem(16);
+		}
+	}
+
+	banner {
+		.content-wrapper {
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		height: max(40vh, functions.rem(300));
+		background-color: map.get(theme.$colors, grey);
+	}
+
+	banner.inner-banner {
+		background-color: map.get(theme.$colors, main);
+		color: map.get(theme.$colors, white);
+	}
+}

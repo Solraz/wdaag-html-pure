@@ -1,9 +1,6 @@
 {% extends "_base.html" %}
 
 {% block custom_style %}
-<link rel="stylesheet" href="{{ get_url(path='css/components/banner.css') }}" />
-<link rel="stylesheet" href="{{ get_url(path='css/components/masonry.css') }}" />
-<link rel="stylesheet" href="{{ get_url(path='css/page/home.css') }}" />
 {% endblock custom_style %}
 
 {% block background %}
@@ -20,10 +17,9 @@
 <banner>
   <div class="content-wrapper">
     <div class="callout">
-      <h1 class="h0">marketing & criação, ux / ui & web design</h1>
+      <h1 class="h0">marketing & criação <br /> ux / ui design <br /> tecnologia</h1>
       <h3>
-        Explore conosco o <strong>potencial ilimitado</strong> da internet para
-        transformar o seu negócio.
+        Assessoria de Marketing Digital 360°
       </h3>
     </div>
   </div>
@@ -39,7 +35,8 @@
     </div>
     <div class="content">
       <div class="card">
-        <h3 class="title"><strong>Marketing Digital</strong></h3>
+        <h3 class="title" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body"
+          hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Marketing Digital</strong></h3>
         <p class="text">Mais do que uma agência digital, nossa proposta é atuar como o time de marketing do seu negócio.
           Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
 
@@ -51,7 +48,8 @@
         </div>
       </div>
       <div class="card">
-        <h3 class="title"><strong>Design</strong></h3>
+        <h3 class="title" hx-post="{{ get_url(path='/design') }}" hx-trigger="click throttle:250ms" hx-target="body"
+          hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Design</strong></h3>
         <p class="text">Somos um estúdio de criação especializado em comunicação visual, ilustração e projetos gráficos
           2D
           e
@@ -64,7 +62,8 @@
         </div>
       </div>
       <div class="card">
-        <h3 class="title"><strong>UX / UI Design</strong></h3>
+        <h3 class="title" hx-post="{{ get_url(path='/ux-ui-design') }}" hx-trigger="click throttle:250ms"
+          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>UX / UI Design</strong></h3>
         <p class="text">Desenvolvemos ambientes e produtos através do estudo da usabilidade e experiência do usuário
           final.<br />
           Planejamos soluções e interações que promovem engajamento, conexão e conversão.</p>
@@ -76,7 +75,8 @@
         </div>
       </div>
       <div class="card">
-        <h3 class="title"><strong>Desenvolvimento</strong></h3>
+        <h3 class="title" hx-post="{{ get_url(path='/desenvolvimento') }}" hx-trigger="click throttle:250ms"
+          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Desenvolvimento</strong></h3>
         <p class="text">Materializamos as suas ideias. <br />
           Seja um e-commerce, um site ou aplicativo, nossa equipe atuará no planejamento, na concepção e no
           desenvolvimento
@@ -93,5 +93,6 @@
   </div>
 </div>
 
-{% include "components/masonry.html" %}
+{{ section.content | safe }}
+
 {% endblock content %}

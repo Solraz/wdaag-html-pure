@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "theme";
+@use "functions";
 
 @font-face {
 	font-family: "Urbanist";
@@ -12,12 +13,12 @@
 	src: url("/fonts/Urbanist-Italic.ttf") format("truetype");
 }
 
-@mixin Roboto {
+@mixin Urbanist {
 	font-family: "Urbanist", sans-serif;
 }
 
 body {
-	@include Roboto;
+	@include Urbanist;
 	font-size: 16px;
 
 	@media (min-width: 1920px) {
@@ -38,13 +39,14 @@ $sizes: map.get(theme.$fonts, sizes);
 		$sizemax: calc($size * 1.25) + rem;
 
 		font-size: clamp($sizemin, $fluid, $sizemax);
-		line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
-		letter-spacing: calc(0.1 / $i) + rem;
 
 		@if ($i == 1 or $i == 0) {
 			line-height: clamp($sizemin * 1.1, $fluid * 1.1, $sizemax * 1.1);
+			letter-spacing: functions.rem(0.25);
 			font-weight: 500;
 		} @else {
+			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
+			letter-spacing: calc(0.1 / $i) + rem;
 			font-weight: 300;
 		}
 	}
@@ -53,7 +55,12 @@ $sizes: map.get(theme.$fonts, sizes);
 		span,
 		p,
 		li,
-		div {
+		div,
+		button,
+		a {
+			@include Urbanist;
+			text-decoration: none;
+
 			$size: map.get($sizes, h#{$i});
 
 			$sizemin: $size + rem;
@@ -65,7 +72,11 @@ $sizes: map.get(theme.$fonts, sizes);
 			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
 			letter-spacing: calc(0.1 / $i) + rem;
 
-			font-weight: 300;
+			font-weight: 400;
+		}
+
+		button {
+			font-weight: 500;
 		}
 	}
 }

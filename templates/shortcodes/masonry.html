@@ -1,0 +1,43 @@
+<div class="masonry">
+	<div class="content-wrapper">
+		<masonry-vertical>
+			{% for brick in section.extra.masonry %}
+			{% if brick.switch is undefined %}
+			{% set switch = brick.portfolio %}
+			{% else %}
+			{% set switch = brick.switch %}
+			{% endif %}
+			<masonry-brick class="{{brick.class}}">
+				<masonry-content>
+					<div class="skeleton"></div>
+					<img class="lazy" data-src="{{ get_url(path='' ~ brick.portfolio) }}" alt="" />
+					<div class="description">
+						<div class="image-holder">
+							<img class="lazy" data-src="{{ get_url(path='' ~ brick.backdrop) }}" alt="" />
+						</div>
+						<div class="text">
+							<p>{{brick.title}}</p>
+						</div>
+					</div>
+					<div class="extra">
+						<img class="lazy" data-src="{{ get_url(path='' ~ switch) }}" alt="" />
+						<div class="description">
+							<div>
+								<div class="image-holder">
+									<img class="lazy" data-src="{{ get_url(path='' ~ brick.backdrop) }}" alt="" />
+								</div>
+								<div class="text">
+									<p>{{brick.title}}</p>
+								</div>
+							</div>
+							<div class="big-text">
+								<p>{{brick.description}}</p>
+							</div>
+						</div>
+					</div>
+				</masonry-content>
+			</masonry-brick>
+			{% endfor %}
+		</masonry-vertical>
+	</div>
+</div>

@@ -27,8 +27,11 @@ const resize_all_masonry_items = () => {
 };
 
 const masonry_interaction = () => {
-	let masonry = document.querySelector(`masonry-vertical`),
-		masonry_bricks = masonry.querySelectorAll(`masonry-content`);
+	let masonry = document.querySelector(`masonry-vertical`);
+
+	if (!masonry) return;
+
+	let masonry_bricks = masonry.querySelectorAll(`masonry-content`);
 
 	masonry.addEventListener("mouseleave", () => {
 		for (const m of masonry_bricks) {
