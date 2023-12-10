@@ -1,0 +1,14 @@
+{% if page %}
+{% set section = page %}
+{% endif %}
+
+<banner class="final-callout">
+  <div class="content-wrapper">
+    <div class="callout">
+      <h2>{{ section.extra.finalcallout }}</h2>
+      <div>
+        <button>Entre em contato conosco <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
+      </div>
+    </div>
+  </div>
+</banner>

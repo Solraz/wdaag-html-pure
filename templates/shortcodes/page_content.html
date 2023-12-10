@@ -1,0 +1,23 @@
+{% if page %}
+{% set section = page %}
+{% endif %}
+
+{% set number = nth - 1 %}
+<section class="pages-sales-pitch">
+  <div class="content-wrapper">
+    <h2>{{ section.extra.content[number] | safe }}</h2>
+    <divider-horizontal></divider-horizontal>
+
+    {% if section.extra.content_sub[number] %}
+    {{ section.extra.content_sub[number] | safe }}
+    {% endif %}
+
+    <div class="sales-body">
+      {% for item in section.extra.content_items[number] %}
+
+      <div class="item">{{item | safe}}</div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

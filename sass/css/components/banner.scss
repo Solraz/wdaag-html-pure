@@ -17,7 +17,6 @@ banner {
 		flex-flow: column;
 
 		gap: functions.rem(25);
-		width: clamp(functions.rem(768), 75%, functions.rem(1280));
 
 		h3 {
 			font-weight: 300;

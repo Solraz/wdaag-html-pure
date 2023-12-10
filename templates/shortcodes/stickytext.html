@@ -8,7 +8,7 @@
     <div class="sticky">
       {% for sticky in section.extra.sticky[number] %}
 
-      {% if loop.first %}
+      {% if loop.first and sticky is not iterable %}
 
       <h1>{{sticky | safe}}</h1>
 

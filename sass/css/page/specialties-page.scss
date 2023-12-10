@@ -54,6 +54,80 @@ banner.specialties {
 			}
 		}
 
+		&.pages-sales-pitch {
+			text-align: center;
+			padding: functions.rem(64) 0;
+
+			divider-horizontal {
+				background-color: map.get(theme.$colors, primary);
+				width: functions.rem(200);
+				height: functions.rem(1);
+			}
+
+			.content-wrapper {
+				flex-flow: column;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+
+				gap: functions.rem(24);
+
+				> h3 {
+					margin-bottom: functions.rem(48);
+				}
+			}
+
+			mark {
+				background-color: map.get(theme.$colors, white);
+				color: map.get(theme.$colors, main);
+			}
+
+			::marker {
+				color: map.get(theme.$colors, white);
+			}
+
+			ul {
+				gap: functions.rem(12);
+			}
+
+			.sales-body {
+				display: flex;
+				flex-flow: row;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				gap: functions.rem(24);
+
+				@media (max-width: functions.rem(1304)) {
+					flex-flow: column;
+					align-items: center;
+				}
+
+				.item {
+					display: flex;
+					flex-flow: column;
+					justify-content: start;
+					align-items: start;
+
+					text-align: left;
+
+					gap: functions.rem(24);
+
+					width: max(calc(33% - functions.rem(24)), functions.rem(320));
+
+					background-color: map.get(theme.$colors, primary);
+					color: map.get(theme.$colors, white);
+
+					padding: functions.rem(48) functions.rem(36);
+					border-radius: functions.rem(24);
+
+					@media (max-width: functions.rem(1304)) {
+						width: min(100%, functions.rem(600));
+					}
+				}
+			}
+		}
+
 		&.sales-pitch {
 			.content-wrapper {
 				flex-flow: row;
@@ -102,9 +176,15 @@ banner.specialties {
 		ul {
 			display: flex;
 			flex-flow: column;
-			gap: functions.rem(32);
+			justify-content: start;
+			align-items: start;
+
+			text-align: left;
+
+			gap: functions.rem(36);
 
 			margin-left: functions.rem(16);
+			margin-bottom: functions.rem(24);
 		}
 	}
 
@@ -123,8 +203,60 @@ banner.specialties {
 		background-color: map.get(theme.$colors, main);
 		color: map.get(theme.$colors, white);
 
+		divider-horizontal {
+			background-color: map.get(theme.$colors, primary);
+			width: functions.rem(200);
+			height: functions.rem(1);
+		}
+
+		> .content-wrapper {
+			width: clamp(functions.rem(320), 90vw, functions.rem(1560));
+		}
+
+		&.has-items {
+			padding: functions.rem(64) 0;
+			height: auto;
+		}
+
 		h1 {
 			font-weight: 300;
+		}
+
+		.items {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: start;
+
+			gap: functions.rem(24);
+
+			.item {
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				align-items: center;
+
+				gap: functions.rem(24);
+
+				width: max(calc(33% - functions.rem(24)), functions.rem(320));
+
+				@media (max-width: functions.rem(1304)) {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	banner.final-callout {
+		background-color: map.get(theme.$colors, white);
+
+		.callout {
+			justify-content: center;
+			align-items: center;
+
+			h3 {
+				font-variant: normal;
+			}
 		}
 	}
 }

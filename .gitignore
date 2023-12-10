@@ -15,6 +15,9 @@ node_modules/
 bun.lockb
 
 static/img/media
+static/img/media/
+/static/img/media
+
 /media
 media
 media/
