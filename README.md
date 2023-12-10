@@ -4,10 +4,7 @@ Requirements:
 [Zola](https://www.getzola.org)
 
 To install Zola:
-
-```bash
-choco install zola
-```
+[Zola Installation](https://www.getzola.org/documentation/getting-started/installation/)
 
 To run:
 
