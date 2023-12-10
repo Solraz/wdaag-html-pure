@@ -17,3 +17,19 @@ To build:
 ```bash
 zola build
 ```
+
+To deploy in WHM:
+
+```bash
+Move all contents from public folder to /public-html
+Add following .htaccess rules:
+
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+```
