@@ -17,12 +17,21 @@
 	font-family: "Urbanist", sans-serif;
 }
 
+html {
+	@include Urbanist;
+	font-size: 16px;
+
+	@media (min-width: 1920px) {
+		font-size: 0.83333vw !important;
+	}
+}
+
 body {
 	@include Urbanist;
 	font-size: 16px;
 
 	@media (min-width: 1920px) {
-		font-size: 0.8333vw;
+		font-size: 0.83333vw !important;
 	}
 }
 
@@ -42,8 +51,8 @@ $sizes: map.get(theme.$fonts, sizes);
 
 		@if ($i == 1 or $i == 0) {
 			line-height: clamp($sizemin * 1.1, $fluid * 1.1, $sizemax * 1.1);
-			letter-spacing: functions.rem(0.25);
-			font-weight: 500;
+			letter-spacing: functions.rem(-0.25);
+			font-weight: 600;
 		} @else {
 			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
 			letter-spacing: calc(0.1 / $i) + rem;

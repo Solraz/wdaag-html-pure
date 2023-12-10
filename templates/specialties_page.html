@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+
+{% block custom_style %}
+{% endblock custom_style %}
+
+{% block banner %}
+<banner class="specialties">
+  <div class="content-wrapper">
+    <div class="callout">
+      <h1 class="h0">{{ page.extra.banner }}</h1>
+      <h3>{{ page.extra.banner_extra }}</h3>
+    </div>
+  </div>
+</banner>
+{% endblock banner %}
+
+{% block content %}
+<div class="specialties-content">
+
+  {{page.content | safe}}
+
+</div>
+{% endblock content %}

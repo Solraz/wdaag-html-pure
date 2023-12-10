@@ -1,3 +1,7 @@
+{% if page %}
+{% set section = page %}
+{% endif %}
+
 {% set number = nth - 1 %}
 <section class="sales-pitch">
   <div class="content-wrapper">
@@ -20,7 +24,7 @@
 
       {% if sticky is string and sticky != "button" %}
 
-      <p>{{sticky | safe}}</p>
+      {{sticky | safe}}
 
       {% endif %}
 

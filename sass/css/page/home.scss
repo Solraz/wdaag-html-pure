@@ -4,28 +4,28 @@
 
 .services {
 	display: flex;
-	padding: functions.rem(25) 0 functions.rem(100);
+	padding: functions.rem(24) 0 functions.rem(96);
 
 	> .content-wrapper {
 		flex-flow: column;
-		gap: functions.rem(25);
+		gap: functions.rem(24);
 	}
 
 	> .content-wrapper > .title {
 		display: flex;
 		flex-flow: column;
-		gap: functions.rem(15);
+		gap: functions.rem(12);
 		z-index: 2;
 
 		> divider-horizontal {
-			width: functions.rem(200);
+			width: functions.rem(192);
 			z-index: 1;
 		}
 	}
 
 	> .content-wrapper > .content {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(200), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(functions.rem(192), 1fr));
 		grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
 
 		gap: functions.rem(40);
@@ -42,7 +42,7 @@
 			display: flex;
 			flex-flow: column;
 
-			margin-top: functions.rem(15);
+			margin-top: functions.rem(12);
 
 			p {
 				font-weight: 600;

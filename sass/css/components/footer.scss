@@ -6,11 +6,11 @@ footer {
 	display: flex;
 
 	background-color: map.get(theme.$colors, black);
-	padding: functions.rem(25) 0 functions.rem(100);
+	padding: functions.rem(64) 0 functions.rem(64);
 
 	.content-wrapper {
 		flex-flow: column;
-		gap: functions.rem(25);
+		gap: functions.rem(24);
 	}
 
 	.footer-content {
@@ -19,22 +19,22 @@ footer {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		gap: functions.rem(25);
+		gap: functions.rem(24);
 
 		> div {
-			min-width: functions.rem(200);
+			min-width: functions.rem(228);
 		}
 
 		.contact {
 			display: flex;
 			flex-flow: column;
-			gap: functions.rem(10);
+			gap: functions.rem(12);
 
 			.social-media {
 				display: flex;
 				justify-content: start;
 				align-items: center;
-				gap: functions.rem(10);
+				gap: functions.rem(12);
 
 				img {
 					object-fit: cover;

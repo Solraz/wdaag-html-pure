@@ -62,8 +62,8 @@ masonry-vertical {
 
 	masonry-brick {
 		display: flex;
-		min-width: functions.rem(250);
-		min-height: functions.rem(300);
+		min-width: functions.rem(248);
+		min-height: functions.rem(248);
 		border-radius: functions.rem(24);
 
 		overflow: hidden;
@@ -721,7 +721,7 @@ masonry-vertical {
 
 				.extra {
 					> img {
-						object-position: left;
+						object-position: right;
 					}
 
 					.image-holder > img {

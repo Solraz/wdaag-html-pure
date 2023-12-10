@@ -1,0 +1,130 @@
+@use "sass:map";
+@use "../mixins/functions";
+@use "../mixins/theme";
+
+banner.specialties {
+	height: max(50vh, functions.rem(600));
+
+	.content-wrapper {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		h3 {
+			font-variant: normal;
+		}
+	}
+}
+
+.specialties-content {
+	background-color: map.get(theme.$colors, white);
+	color: map.get(theme.$colors, main);
+
+	section {
+		padding: functions.rem(48) functions.rem(12) functions.rem(48);
+
+		&.callout-page {
+			background-color: map.get(theme.$colors, white);
+			text-align: center;
+
+			divider-horizontal {
+				background-color: map.get(theme.$colors, primary);
+				width: functions.rem(200);
+				height: functions.rem(1);
+			}
+
+			.content-wrapper {
+				width: clamp(functions.rem(320), 90vw, functions.rem(960));
+			}
+
+			.text {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				gap: functions.rem(24);
+			}
+
+			.image {
+				flex-grow: 1;
+			}
+
+			&.has_image {
+				text-align: left;
+				align-items: start;
+			}
+		}
+
+		&.sales-pitch {
+			.content-wrapper {
+				flex-flow: row;
+				flex-wrap: wrap;
+				align-items: start;
+				justify-content: center;
+				gap: functions.rem(24);
+
+				position: relative;
+
+				> div {
+					width: max(functions.rem(296), calc(50% - functions.rem(24)));
+
+					@media (max-width: functions.rem(737)) {
+						width: 100%;
+					}
+				}
+			}
+
+			.sticky {
+				display: flex;
+				flex-flow: column;
+				gap: functions.rem(24);
+
+				position: sticky;
+				top: functions.rem(72);
+
+				@media (max-width: functions.rem(737)) {
+					position: relative;
+					top: 0;
+				}
+
+				h3 {
+					color: map.get(theme.$colors, primary);
+					font-weight: 500;
+				}
+			}
+
+			.sales-body {
+				display: flex;
+				flex-flow: column;
+				gap: functions.rem(24);
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-flow: column;
+			gap: functions.rem(32);
+
+			margin-left: functions.rem(16);
+		}
+	}
+
+	banner {
+		.content-wrapper {
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		height: max(40vh, functions.rem(300));
+		background-color: map.get(theme.$colors, grey);
+	}
+
+	banner.inner-banner {
+		background-color: map.get(theme.$colors, main);
+		color: map.get(theme.$colors, white);
+
+		h1 {
+			font-weight: 300;
+		}
+	}
+}

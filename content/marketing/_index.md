@@ -1,6 +1,7 @@
 +++
 title = "WDA Agência Digital - Assistência de Marketing Digital"
 template = "specialties.html"
+page_template = "specialties_page.html"
 
 [extra]
 banner = "Marketing"

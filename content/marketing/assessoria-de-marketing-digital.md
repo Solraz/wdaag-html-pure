@@ -1,0 +1,53 @@
++++
+title = "WDA Agência Digital - Assistência de Marketing Digital"
+template = "specialties_page.html"
+
+[extra]
+banner = "Assessoria de Marketing Digital"
+banner_extra = ""
+
+callout = "Somos uma agência de marketing e criação especializada em planejamento, criação e gestão de campanhas digitais e analógicas"
+callout_sub = "<h3>Tenha uma equipe completa, <strong>da estratégia a criação,</strong> atuando no crescimento do seu negócio.</h3>"
+
+2banner = "Alcance os resultados desejados"
+2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
+
+
+sticky = [["Assessoria de <strong>Marketing Digital 360°</strong>",
+"<h3>Planejamento, criação e gerenciamento de campanhas</h3>",
+"<p>Assessoria de Marketing Digital é um serviço que visa auxiliar empresas a melhorar sua presença e desempenho online. Por meio de estratégias de marketing digital personalizadas, nossos especialistas da assessoria trabalham para aumentar a visibilidade e autoridade da sua marca na internet, atraindo mais clientes e gerando mais negócios.</p><p>Nossa equipe de assessoria de marketing digital têm conhecimento especializado em diversas áreas, como SEO, mídias sociais, conteúdo e análise de dados. Utilizamos ferramentas e tecnologias avançadas para criar campanhas de marketing digital eficientes, que ajudam as empresas a alcançar seus objetivos de negócio.</p><p>Se você deseja melhorar sua presença na internet e alavancar seus negócios, não deixe de considerar uma assessoria de marketing digital.</p>"],
+
+["Assessoria de <strong>Marketing Digital 360°</strong>",
+"<h3>Planejamento, criação e gerenciamento de campanhas</h3>",
+"<p>Assessoria de Marketing Digital é um serviço que visa auxiliar empresas a melhorar sua presença e desempenho online. Por meio de estratégias de marketing digital personalizadas, nossos especialistas da assessoria trabalham para aumentar a visibilidade e autoridade da sua marca na internet, atraindo mais clientes e gerando mais negócios.</p><p>Nossa equipe de assessoria de marketing digital têm conhecimento especializado em diversas áreas, como SEO, mídias sociais, conteúdo e análise de dados. Utilizamos ferramentas e tecnologias avançadas para criar campanhas de marketing digital eficientes, que ajudam as empresas a alcançar seus objetivos de negócio.</p><p>Se você deseja melhorar sua presença na internet e alavancar seus negócios, não deixe de considerar uma assessoria de marketing digital.</p>"]]
+
+
+floating = [["""
+<ul>
+  <li><h3>Planejamento de marketing digital</h3> A assessoria pode ajudar a empresa a criar um plano de marketing digital abrangente, que inclui o uso de diferentes canais e táticas para alcançar o público-alvo.</li>
+  <li><h3>Gerenciamento de mídias sociais</h3> A assessoria pode ajudar a empresa a criar uma presença forte nas mídias sociais, gerenciando perfis em plataformas como Facebook, Instagram, Twitter, LinkedIn, entre outras.</li>
+  <li><h3>Produção de conteúdo</h3> A assessoria pode ajudar a empresa a criar conteúdo relevante e atrativo para o seu público-alvo, incluindo artigos de blog, vídeos, infográficos, entre outros.</li>
+  <li><h3>Otimização para motores de busca (SEO)</h3> A assessoria pode ajudar a empresa a melhorar a sua posição nos resultados dos motores de busca, tornando o seu site mais visível e acessível para o público.</li>
+  <li><h3>Publicidade online</h3> A assessoria pode ajudar a empresa a criar campanhas de publicidade online eficazes, incluindo anúncios em redes sociais, Google AdWords, entre outros.</li>
+  <li><h3>Análise de dados e métricas</h3> A assessoria pode ajudar a empresa a monitorar e analisar dados de desempenho para entender melhor o sucesso das suas campanhas de marketing digital e ajustar suas estratégias em conformidade.</li>
+</ul>
+<p>Esses são apenas alguns exemplos dos serviços que uma assessoria de marketing digital pode oferecer, e as soluções personalizadas para cada cliente podem variar de acordo com as suas necessidades específicas.</p>
+"""],
+["""
+<ul>
+  <li><h3>Planejamento de marketing digital</h3> A assessoria pode ajudar a empresa a criar um plano de marketing digital abrangente, que inclui o uso de diferentes canais e táticas para alcançar o público-alvo.</li>
+  <li><h3>Gerenciamento de mídias sociais</h3> A assessoria pode ajudar a empresa a criar uma presença forte nas mídias sociais, gerenciando perfis em plataformas como Facebook, Instagram, Twitter, LinkedIn, entre outras.</li>
+  <li><h3>Produção de conteúdo</h3> A assessoria pode ajudar a empresa a criar conteúdo relevante e atrativo para o seu público-alvo, incluindo artigos de blog, vídeos, infográficos, entre outros.</li>
+  <li><h3>Otimização para motores de busca (SEO)</h3> A assessoria pode ajudar a empresa a melhorar a sua posição nos resultados dos motores de busca, tornando o seu site mais visível e acessível para o público.</li>
+  <li><h3>Publicidade online</h3> A assessoria pode ajudar a empresa a criar campanhas de publicidade online eficazes, incluindo anúncios em redes sociais, Google AdWords, entre outros.</li>
+  <li><h3>Análise de dados e métricas</h3> A assessoria pode ajudar a empresa a monitorar e analisar dados de desempenho para entender melhor o sucesso das suas campanhas de marketing digital e ajustar suas estratégias em conformidade.</li>
+</ul>
+<p>Esses são apenas alguns exemplos dos serviços que uma assessoria de marketing digital pode oferecer, e as soluções personalizadas para cada cliente podem variar de acordo com as suas necessidades específicas.</p>
+"""]]
++++
+
+{{ page_callout() }}
+{{ stickytext() }}
+{{ second_banner() }}
+{{ stickytext() }}
+{{ final_callout() }}
