@@ -4,6 +4,7 @@
 
 banner.specialties {
 	height: max(50vh, functions.rem(600));
+	background-color: map.get(theme.$colors, main);
 
 	.content-wrapper {
 		justify-content: center;

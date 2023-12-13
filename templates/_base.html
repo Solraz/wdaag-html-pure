@@ -11,6 +11,8 @@
 	{% block custom_style %}
 	{% endblock custom_style %}
 
+	{% include "components/nav.html" %}
+
 	<main id="main">
 
 		{% include "components/menu.html" %}
@@ -23,9 +25,11 @@
 
 		{% block content %}
 		{% endblock content %}
+
+
+		{{ macros::footer() }}
 	</main>
 
-	{{ macros::footer() }}
 
 	{{ macros::scripts() }}
 

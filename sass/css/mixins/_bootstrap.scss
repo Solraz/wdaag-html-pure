@@ -13,6 +13,14 @@ body {
 	color: map.get(theme.$colors, white);
 }
 
+main {
+	z-index: 2;
+	position: relative;
+
+	transition: transform 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+	transform-origin: left;
+}
+
 .content-wrapper {
 	display: flex;
 
@@ -35,13 +43,13 @@ body {
 	}
 }
 
-body.htmx-swapping > main {
+body.htmx-swapping > main > *:not(.background-wrapper-fixed) {
 	opacity: 0;
 }
-body.htmx-added > main {
+body.htmx-added > main > *:not(.background-wrapper-fixed) {
 	opacity: 0;
 }
-body > main {
+body > main > *:not(.background-wrapper-fixed) {
 	opacity: 1;
 	transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -56,13 +64,12 @@ body > main {
 
 	position: absolute;
 
+	background-color: map.get(theme.$colors, main);
+
 	z-index: -1;
 
 	width: 100%;
-	height: 200%;
-
-	animation: background-fade-in 2500ms ease-out;
-	animation-fill-mode: forwards;
+	height: 100%;
 
 	overflow: hidden;
 
@@ -82,10 +89,11 @@ body > main {
 
 		z-index: 1;
 
-		background-color: map.get(theme.$colors, main);
-
 		width: 100%;
 		height: 100%;
+
+		animation: background-fade-in 2500ms ease-out;
+		animation-fill-mode: forwards;
 
 		img {
 			position: absolute;
@@ -96,7 +104,7 @@ body > main {
 
 			&:nth-of-type(1) {
 				// transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
-				top: 12.5%;
+				top: functions.rem(250);
 				left: 7.5%;
 
 				// animation: rotate-blob-1 5000ms linear infinite;
@@ -107,8 +115,9 @@ body > main {
 			}
 
 			&:nth-of-type(2) {
+				display: none;
 				right: 7.5%;
-				top: 45%;
+				top: functions.rem(650);
 
 				@media (max-width: 700px) {
 					right: unset;
@@ -248,7 +257,7 @@ button {
 mark {
 	background-color: map.get(theme.$colors, primary);
 	color: map.get(theme.$colors, white);
-	padding: functions.rem(2) functions.rem(7) functions.rem(4);
+	padding: functions.rem(0) functions.rem(5) functions.rem(4);
 }
 
 ::marker {

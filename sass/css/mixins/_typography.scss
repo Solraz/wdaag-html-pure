@@ -2,16 +2,18 @@
 @use "theme";
 @use "functions";
 
-@font-face {
-	font-family: "Urbanist";
-	src: url("/fonts/Urbanist.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@font-face {
-	font-family: "Urbanist";
-	font-style: italic;
-	src: url("/fonts/Urbanist-Italic.ttf") format("truetype");
-}
+// @font-face {
+// 	font-family: "Urbanist";
+// 	src: url("/fonts/Urbanist.ttf") format("truetype");
+// }
+
+// @font-face {
+// 	font-family: "Urbanist";
+// 	font-style: italic;
+// 	src: url("/fonts/Urbanist-Italic.ttf") format("truetype");
+// }
 
 @mixin Urbanist {
 	font-family: "Urbanist", sans-serif;
@@ -74,7 +76,7 @@ $sizes: map.get(theme.$fonts, sizes);
 
 			$sizemin: $size + rem;
 			$sizevw: $size * 1 + vw;
-			$fluid: calc($sizevw + ($sizemin * 1));
+			$fluid: calc($sizevw + ($sizemin * 0.5));
 			$sizemax: calc($size * 1.1) + rem;
 
 			font-size: clamp($sizemin, $fluid, $sizemax);

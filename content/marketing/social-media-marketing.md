@@ -3,7 +3,7 @@ title = "WDA Agência Digital - Assistência de Marketing Digital"
 template = "specialties_page.html"
 
 [extra]
-banner = "Assessoria de Marketing Digital"
+banner = "Social Media Marketing"
 banner_extra = ""
 
 callout = "Desenvolva uma identidade única para a sua marca e aproxime-se do seu público."

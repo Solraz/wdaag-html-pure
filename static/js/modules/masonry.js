@@ -26,30 +26,30 @@ const resize_all_masonry_items = () => {
 	}
 };
 
+const masonry_bricks_enter = (brick) => {
+	brick.classList.add("active");
+};
+const masonry_bricks_leave = (brick) => {
+	brick.classList.remove("active");
+};
+const masonry_bricks_click = (m) => {
+	m.classList.toggle("active");
+};
+
+const masonry_bricks = (bricks) => {
+	for (const m of bricks) {
+		m.addEventListener("mouseenter", masonry_bricks_enter.bind(null, m));
+		m.addEventListener("click", masonry_bricks_click.bind(null, m));
+		m.addEventListener("mouseleave", masonry_bricks_leave.bind(null, m));
+	}
+};
 const masonry_interaction = () => {
 	let masonry = document.querySelector(`masonry-vertical`);
-
 	if (!masonry) return;
 
-	let masonry_bricks = masonry.querySelectorAll(`masonry-content`);
+	let bricks = masonry.querySelectorAll(`masonry-content`);
 
-	masonry.addEventListener("mouseleave", () => {
-		for (const m of masonry_bricks) {
-			m.addEventListener("mouseleave", () => {
-				m.classList.remove("active");
-			});
-		}
-	});
-
-	for (const m of masonry_bricks) {
-		m.addEventListener("mouseenter", () => {
-			m.classList.add("active");
-		});
-
-		m.addEventListener("mouseleave", () => {
-			m.classList.remove("active");
-		});
-	}
+	masonry_bricks(bricks);
 };
 
 export { resize_masonry_item, resize_all_masonry_items, masonry_interaction };

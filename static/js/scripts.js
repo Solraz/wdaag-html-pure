@@ -1,16 +1,18 @@
-import { navbar } from "./modules/navbar.js";
+import { navbar, navbar_filter } from "./modules/navbar.js";
 import { masonry_interaction } from "./modules/masonry.js";
 import { lazy_images } from "./modules/lazy_images.js";
 // import { sticky_text } from "./modules/interactivity.js";
 
 window.addEventListener("load", () => {
 	navbar();
+	navbar_filter();
 	lazy_images();
 	masonry_interaction();
 	// sticky_text();
 
 	htmx.on("htmx:load", () => {
 		navbar();
+		navbar_filter();
 		lazy_images();
 		masonry_interaction();
 		// sticky_text();
