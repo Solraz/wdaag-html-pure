@@ -53,11 +53,11 @@ $sizes: map.get(theme.$fonts, sizes);
 
 		@if ($i == 1 or $i == 0) {
 			line-height: clamp($sizemin * 1.1, $fluid * 1.1, $sizemax * 1.1);
-			letter-spacing: functions.rem(-0.25);
+			letter-spacing: calc(-0.025 * $size) + rem;
 			font-weight: 600;
 		} @else {
 			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
-			letter-spacing: calc(0.1 / $i) + rem;
+			letter-spacing: calc(0.05 * $size) + rem;
 			font-weight: 300;
 		}
 	}
@@ -74,14 +74,14 @@ $sizes: map.get(theme.$fonts, sizes);
 
 			$size: map.get($sizes, h#{$i});
 
-			$sizemin: $size + rem;
-			$sizevw: $size * 1 + vw;
-			$fluid: calc($sizevw + ($sizemin * 0.5));
+			$sizemin: calc($size * 1) + rem;
+			$sizevw: $size * 0.5 + vw;
+			$fluid: calc($sizevw + ($sizemin * 0.66));
 			$sizemax: calc($size * 1.1) + rem;
 
 			font-size: clamp($sizemin, $fluid, $sizemax);
-			line-height: clamp($sizemin * 1.5, $fluid * 1.5, $sizemax * 1.5);
-			letter-spacing: calc(0.1 / $i) + rem;
+			line-height: clamp($sizemin * 1.33, $fluid * 1.5, $sizemax * 1.33);
+			letter-spacing: calc(0.1 * $size) + rem;
 
 			font-weight: 400;
 		}

@@ -1,8 +1,9 @@
 const open = () => {
 	let main = document.querySelector(`main`);
+	let navbar = document.querySelector(`nav`);
 
 	let top = window.scrollY;
-	main.style.top = `-${top}px`;
+	// main.style.top = `-${top}px`;
 	main.classList.toggle(`navigation`);
 };
 
