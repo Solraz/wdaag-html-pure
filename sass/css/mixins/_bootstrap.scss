@@ -101,13 +101,13 @@ body > main > *:not(.background-wrapper-fixed) {
 			position: absolute;
 
 			object-fit: cover;
-			width: functions.rem(500);
+			width: functions.rem(600);
 			height: auto;
 
 			&:nth-of-type(1) {
 				// transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
-				top: functions.rem(250);
-				left: 7.5%;
+				top: functions.rem(200);
+				right: 7.5%;
 
 				// animation: rotate-blob-1 5000ms linear infinite;
 				// animation-fill-mode: forwards;

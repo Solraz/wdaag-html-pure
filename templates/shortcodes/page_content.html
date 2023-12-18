@@ -3,7 +3,7 @@
 {% endif %}
 
 {% set number = nth - 1 %}
-<section class="pages-sales-pitch">
+<section class="pages-sales-pitch {% if has_background %}has-background{% endif %}">
   <div class="content-wrapper">
     <h2>{{ section.extra.content[number] | safe }}</h2>
     <divider-horizontal></divider-horizontal>

@@ -58,7 +58,7 @@ floating = [["""
 content = ["A gestão de tráfego pago é uma das principais estratégias do marketing digital.",
 "Tenha uma equipe certificada",
 "<strong>#vemprawda</strong><br/> e encontre os clientes certos."]
-content_sub = ["<h4>Consiste em promover conteúdos e produtos por meio de anúncios pagos em diferentes plataformas, como o Google, Facebook, Instagram e LinkedIn.</h4><h4>A utilização dessa estratégia requer um conhecimento aprofundado das plataformas, das técnicas de segmentação e das boas práticas para maximizar o retorno sobre o investimento (ROI).</h4><h4>Com o Ads, seu anúncio será exibido no momento exato em que uma pessoa estiver pesquisando negócios como o seu. Uma estratégia de tráfego pago exige conhecimento e experiência.</h4>",
+content_sub = ["<p>Consiste em promover conteúdos e produtos por meio de anúncios pagos em diferentes plataformas, como o Google, Facebook, Instagram e LinkedIn.</p><p>A utilização dessa estratégia requer um conhecimento aprofundado das plataformas, das técnicas de segmentação e das boas práticas para maximizar o retorno sobre o investimento (ROI).</p><p>Com o Ads, seu anúncio será exibido no momento exato em que uma pessoa estiver pesquisando negócios como o seu. Uma estratégia de tráfego pago exige conhecimento e experiência.</p>",
 "<p>A WDA é <strong>parceira oficial Google</strong> há mais de 10 anos, com todas as certificações para gerar resultados reais para o seu negócio.</p>", 
 "Vamos começar agora, implementando técnicas para cada um dos objetivos apresentados as seguir:"]
 content_items = [[],

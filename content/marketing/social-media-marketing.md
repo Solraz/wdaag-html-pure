@@ -46,7 +46,7 @@ sticky = [["A sua presença digital começa aqui.",
 
 
 floating = [["""
-Marketing nas redes sociais é um aspecto vital para qualquer empresa que deseja estabelecer uma presença online e se conectar com o público-alvo. As redes sociais se tornaram a plataforma de escolha para empresas que desejam aumentar sua visibilidade, engajamento do público e, em última análise, gerar vendas. O marketing nas redes sociais envolve a criação de conteúdo atraente e relevante para uma empresa, sua promoção em várias plataformas de mídia social e a interação com a base de seguidores. Neste artigo, discutiremos os diferentes aspectos do marketing nas redes sociais e como ele pode ajudar a sua empresa a alcançar o sucesso.
+<p>Marketing nas redes sociais é um aspecto vital para qualquer empresa que deseja estabelecer uma presença online e se conectar com o público-alvo. As redes sociais se tornaram a plataforma de escolha para empresas que desejam aumentar sua visibilidade, engajamento do público e, em última análise, gerar vendas. O marketing nas redes sociais envolve a criação de conteúdo atraente e relevante para uma empresa, sua promoção em várias plataformas de mídia social e a interação com a base de seguidores. Neste artigo, discutiremos os diferentes aspectos do marketing nas redes sociais e como ele pode ajudar a sua empresa a alcançar o sucesso.</p>
 """],
 ["""
 <ul>

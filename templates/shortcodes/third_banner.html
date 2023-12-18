@@ -5,15 +5,15 @@
 <banner class="inner-banner {% if has_items %}has-items{% endif %}{% if has_images %} has-images{% endif %}">
   <div class="content-wrapper">
     <div class="callout">
-      <h1>{{ section.extra.2banner | safe }}</h1>
-      {% if section.extra.2banner_items %}
+      <h1>{{ section.extra.3banner | safe }}</h1>
+      {% if section.extra.3banner_items %}
       <div class="items">
         {% for item in section.extra.2banner_items %}
         {{item | safe}}
         {% endfor %}
       </div>
       {% else %}
-      <h3>{{ section.extra.2banner_extra | safe }}</h3>
+      <h3>{{ section.extra.3banner_extra | safe }}</h3>
       {% endif %}
     </div>
   </div>

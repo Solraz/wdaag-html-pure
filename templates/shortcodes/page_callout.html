@@ -1,4 +1,4 @@
-<section class="callout-page {% if has_image %}has_image{% endif %}">
+<section class="callout-page {% if has_image %}has-image{% endif %}">
   <div class="content-wrapper">
     <div class="text">
       <h2>{{ page.extra.callout | safe }}</h2>
@@ -7,7 +7,7 @@
       {{ page.extra.callout_sub | safe }}
       {% endif %}
       <div>
-        <button>Entre em contato conosco <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
+        <button>Solicite orçamento <img src="{{ get_url(path='img/arrow-right-solid.svg') }}" alt=""></button>
       </div>
     </div>
     {% if has_image %}

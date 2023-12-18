@@ -30,10 +30,10 @@ sticky = [["Imagem, Presença e Autoridade.",
 </ul>"""]]
 
 
-floating = [["Quando falamos em sucesso de um negócio, é essencial compreender a importância da imagem, presença e autoridade. Esses elementos são fundamentais para consolidar a reputação de uma empresa no mercado, construir uma base de clientes fiéis e garantir a longevidade do negócio.", 
-"A imagem de uma empresa é como ela é percebida pelo mercado, e deve ser cuidadosamente construída e mantida. Uma imagem positiva transmite credibilidade, confiança e valor aos clientes e parceiros, e é um diferencial competitivo no mercado.", 
-"A presença de uma empresa é a sua visibilidade e relevância no mercado. É importante estar presente nos canais adequados e utilizar as estratégias corretas para ser visto e lembrado pelos clientes em potencial. A presença deve ser cuidadosamente planejada e executada, considerando as particularidades de cada mercado e público-alvo.", 
-"A autoridade de uma empresa está relacionada à sua capacidade de liderança, inovação e conhecimento em seu segmento de atuação. Uma empresa com autoridade é respeitada pelo mercado e pelos concorrentes, e tem a capacidade de influenciar e direcionar o setor em que atua."],
+floating = [["<p>Quando falamos em sucesso de um negócio, é essencial compreender a importância da imagem, presença e autoridade. Esses elementos são fundamentais para consolidar a reputação de uma empresa no mercado, construir uma base de clientes fiéis e garantir a longevidade do negócio.</p>", 
+"<p>A imagem de uma empresa é como ela é percebida pelo mercado, e deve ser cuidadosamente construída e mantida. Uma imagem positiva transmite credibilidade, confiança e valor aos clientes e parceiros, e é um diferencial competitivo no mercado.</p>", 
+"<p>A presença de uma empresa é a sua visibilidade e relevância no mercado. É importante estar presente nos canais adequados e utilizar as estratégias corretas para ser visto e lembrado pelos clientes em potencial. A presença deve ser cuidadosamente planejada e executada, considerando as particularidades de cada mercado e público-alvo.</p>", 
+"<p>A autoridade de uma empresa está relacionada à sua capacidade de liderança, inovação e conhecimento em seu segmento de atuação. Uma empresa com autoridade é respeitada pelo mercado e pelos concorrentes, e tem a capacidade de influenciar e direcionar o setor em que atua.</p>"],
 
 [["h1", "Como funciona"], ["h3", "O nosso processo de Assessoria de Marketing Digital é simples e eficaz."], 
 """

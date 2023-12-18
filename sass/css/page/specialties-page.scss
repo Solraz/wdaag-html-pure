@@ -2,20 +2,6 @@
 @use "../mixins/functions";
 @use "../mixins/theme";
 
-banner.specialties {
-	height: max(50vh, functions.rem(600));
-
-	.content-wrapper {
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-
-		h3 {
-			font-variant: normal;
-		}
-	}
-}
-
 .specialties-content {
 	background-color: map.get(theme.$colors, white);
 	color: map.get(theme.$colors, main);
@@ -23,18 +9,34 @@ banner.specialties {
 	section {
 		padding: functions.rem(48) functions.rem(12) functions.rem(48);
 
+		p,
+		div,
+		li {
+			font-weight: 400;
+		}
+
+		h2 {
+			font-weight: 500;
+		}
+
+		h3 {
+			font-weight: 400;
+		}
+
 		&.callout-page {
 			background-color: map.get(theme.$colors, white);
 			text-align: center;
 
 			divider-horizontal {
 				background-color: map.get(theme.$colors, primary);
-				width: functions.rem(200);
+				width: functions.rem(192);
 				height: functions.rem(1);
 			}
 
-			.content-wrapper {
-				width: clamp(functions.rem(320), 90vw, functions.rem(960));
+			&:not(.has-image) {
+				> .content-wrapper {
+					width: clamp(functions.rem(312), 90vw, functions.rem(960));
+				}
 			}
 
 			.text {
@@ -48,9 +50,32 @@ banner.specialties {
 				flex-grow: 1;
 			}
 
-			&.has_image {
-				text-align: left;
-				align-items: start;
+			&.has-image {
+				> .content-wrapper {
+					.text {
+						text-align: left;
+						align-items: start;
+						justify-content: start;
+					}
+
+					.image {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						height: functions.rem(200);
+						width: functions.rem(500);
+						position: relative;
+
+						img {
+							height: 250%;
+							width: auto;
+
+							position: absolute;
+							top: -100%;
+						}
+					}
+				}
 			}
 		}
 
@@ -60,8 +85,13 @@ banner.specialties {
 
 			divider-horizontal {
 				background-color: map.get(theme.$colors, primary);
-				width: functions.rem(200);
+				width: functions.rem(192);
 				height: functions.rem(1);
+			}
+
+			&.has-background {
+				background-color: map.get(theme.$colors, main);
+				color: map.get(theme.$colors, white);
 			}
 
 			.content-wrapper {
@@ -113,7 +143,7 @@ banner.specialties {
 
 					gap: functions.rem(24);
 
-					width: max(calc(33% - functions.rem(24)), functions.rem(320));
+					width: max(calc(33% - functions.rem(24)), functions.rem(312));
 
 					background-color: map.get(theme.$colors, primary);
 					color: map.get(theme.$colors, white);
@@ -170,6 +200,10 @@ banner.specialties {
 				display: flex;
 				flex-flow: column;
 				gap: functions.rem(24);
+
+				h3 {
+					font-weight: 500;
+				}
 			}
 		}
 
@@ -181,9 +215,9 @@ banner.specialties {
 
 			text-align: left;
 
-			gap: functions.rem(36);
+			gap: functions.rem(12);
 
-			margin-left: functions.rem(16);
+			margin-left: functions.rem(12);
 			margin-bottom: functions.rem(24);
 		}
 	}
@@ -193,6 +227,7 @@ banner.specialties {
 			justify-content: center;
 			align-items: center;
 			text-align: center;
+			flex-flow: column;
 		}
 
 		height: max(40vh, functions.rem(300));
@@ -203,6 +238,20 @@ banner.specialties {
 		background-color: map.get(theme.$colors, main);
 		color: map.get(theme.$colors, white);
 
+		p,
+		div,
+		li {
+			font-weight: 400;
+		}
+
+		h2 {
+			font-weight: 500;
+		}
+
+		h3 {
+			font-weight: 400;
+		}
+
 		divider-horizontal {
 			background-color: map.get(theme.$colors, primary);
 			width: functions.rem(200);
@@ -210,12 +259,27 @@ banner.specialties {
 		}
 
 		> .content-wrapper {
-			width: clamp(functions.rem(320), 90vw, functions.rem(1560));
+			width: clamp(functions.rem(312), 90vw, functions.rem(1560));
 		}
 
 		&.has-items {
 			padding: functions.rem(64) 0;
 			height: auto;
+		}
+
+		&.has-images {
+			background-color: black;
+
+			.items {
+				.item {
+					width: max(calc(16.6667% - functions.rem(24)), functions.rem(108));
+
+					img {
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
 		}
 
 		h1 {
@@ -238,7 +302,7 @@ banner.specialties {
 
 				gap: functions.rem(24);
 
-				width: max(calc(33% - functions.rem(24)), functions.rem(320));
+				width: max(calc(33% - functions.rem(24)), functions.rem(312));
 
 				@media (max-width: functions.rem(1304)) {
 					width: 100%;
@@ -249,6 +313,20 @@ banner.specialties {
 
 	banner.final-callout {
 		background-color: map.get(theme.$colors, white);
+
+		p,
+		div,
+		li {
+			font-weight: 400;
+		}
+
+		h2 {
+			font-weight: 400;
+		}
+
+		h3 {
+			font-weight: 400;
+		}
 
 		.callout {
 			justify-content: center;

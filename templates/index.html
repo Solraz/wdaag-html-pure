@@ -41,9 +41,13 @@
           Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
 
         <div class="leads">
-          <p>Assessoria de Marketing Digital</p>
-          <p>Social Media Marketing</p>
-          <p>Tráfego Pago</p>
+          <p hx-post="{{ get_url(path='/marketing/assessoria-de-marketing-digital') }}"
+            hx-trigger="click throttle:250ms" hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">
+            Assessoria de Marketing Digital</p>
+          <p hx-post="{{ get_url(path='/marketing/social-media-marketing') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Social Media Marketing</p>
+          <p hx-post="{{ get_url(path='/marketing/trafego-pago') }}" hx-trigger="click throttle:250ms" hx-target="body"
+            hx-swap="multi:body swap:250ms" hx-push-url="true">Tráfego Pago</p>
         </div>
       </div>
       <div class="card">
