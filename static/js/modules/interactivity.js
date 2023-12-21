@@ -1,15 +1,17 @@
-// const sticky_text = () => {
-// 	let stickies = document.querySelectorAll(`.sticky`);
+const accordion = () => {
+	let accordion = document.querySelectorAll(`accordion-header`);
 
-// 	for (const s of stickies) {
-// 		let sticky = s.getBoundingClientRect();
-// 		let sticky_parent = s.parentElement.getBoundingClientRect();
-// 		console.log(sticky, sticky_parent);
+	for (const acc of accordion) {
+		acc.addEventListener("click", () => {
+			for (const acc2 of accordion) {
+				if (acc2 != acc) {
+					acc2.classList.remove(`active`);
+				}
+			}
 
-// 		window.addEventListener("scroll", (e) => {
-// 			let position = window.scrollY;
-// 		});
-// 	}
-// };
+			acc.classList.toggle(`active`);
+		});
+	}
+};
 
-// export { sticky_text };
+export { accordion };

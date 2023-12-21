@@ -59,8 +59,10 @@
           3D</p>
 
         <div class="leads">
-          <p>Identidade Visual</p>
-          <p>Comunicação Visual</p>
+          <p hx-post="{{ get_url(path='/design/identidade-visual') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Identidade Visual</p>
+          <p hx-post="{{ get_url(path='/design/comunicacao-visual') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Comunicação Visual</p>
           <p>Design de Embalagem</p>
           <p>Ilustração</p>
         </div>
