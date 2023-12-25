@@ -14,122 +14,122 @@ callout_sub = "A apresentação da sua marca com alto impacto visual fará toda 
 2banner_items = [
   """
   <div class="item">
-    <img src="/img/logos/aline-vidal.webp" alt="" />
+    <img src="/wda-html/img/logos/aline-vidal.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/alquimia-urban-living.webp" alt="" />
+    <img src="/wda-html/img/logos/alquimia-urban-living.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/autonomia-arqueologia.webp" alt="" />
+    <img src="/wda-html/img/logos/autonomia-arqueologia.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/fixair.webp" alt="" />
+    <img src="/wda-html/img/logos/fixair.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/flamengo-park-towers.webp" alt="" />
+    <img src="/wda-html/img/logos/flamengo-park-towers.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/folguedo.webp" alt="" />
+    <img src="/wda-html/img/logos/folguedo.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/gpcon-realizacoes.webp" alt="" />
+    <img src="/wda-html/img/logos/gpcon-realizacoes.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/instituto-serpa.webp" alt="" />
+    <img src="/wda-html/img/logos/instituto-serpa.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/karla-nunes-fisioterapia.webp" alt="" />
+    <img src="/wda-html/img/logos/karla-nunes-fisioterapia.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/ltg-multiservicos.webp" alt="" />
+    <img src="/wda-html/img/logos/ltg-multiservicos.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/m3.webp" alt="" />
+    <img src="/wda-html/img/logos/m3.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/mar-tratamento-capilar.webp" alt="" />
+    <img src="/wda-html/img/logos/mar-tratamento-capilar.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/moving-fit.webp" alt="" />
+    <img src="/wda-html/img/logos/moving-fit.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/n8-solutions.webp" alt="" />
+    <img src="/wda-html/img/logos/n8-solutions.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/occa-life.webp" alt="" />
+    <img src="/wda-html/img/logos/occa-life.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/pilialoha-waa.webp" alt="" />
+    <img src="/wda-html/img/logos/pilialoha-waa.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/s2-navegacao.webp" alt="" />
+    <img src="/wda-html/img/logos/s2-navegacao.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/santa-rosa-open-residencial.webp" alt="" />
+    <img src="/wda-html/img/logos/santa-rosa-open-residencial.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/sitio-cabure.webp" alt="" />
+    <img src="/wda-html/img/logos/sitio-cabure.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/terraco-corcovado.webp" alt="" />
+    <img src="/wda-html/img/logos/terraco-corcovado.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/trip-rio.webp" alt="" />
+    <img src="/wda-html/img/logos/trip-rio.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/tuca.webp" alt="" />
+    <img src="/wda-html/img/logos/tuca.webp" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/social-burger.png" alt="" />
+    <img src="/wda-html/img/logos/social-burger.png" alt="" />
   </div>
   """,
   """
   <div class="item">
-    <img src="/img/logos/filha-da-terra.png" alt="" />
+    <img src="/wda-html/img/logos/filha-da-terra.png" alt="" />
   </div>
   """,
 ]
@@ -172,7 +172,7 @@ floating = [[["h1", "Como fazemos"],
 [""" 
   <accordion>
     <accordion-item>
-      <accordion-header class="h3">Criação de Identidade <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Criação de Identidade <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <strong>Slogan</strong>
@@ -215,7 +215,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Key Visual | AD <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Key Visual | AD <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>Key visual é um tema gráfico que aparece em todos os materiais publicitários e meios de comunicação de uma marca ou de seu produto, serviço, evento. É distinguir a empresa da concorrência e, ao mesmo tempo, transmitir seus principais valores e provocar emoções apropriadas em um grupo específico de destinatários. É ser coerente, característico e único.</p>
@@ -224,7 +224,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Design <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Design <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>O design é uma importante parte da identidade visual do seu negócio e, todos estes elementos em conjunto, compõem o branding. Ele faz com que a padronização da imagem da sua empresa aconteça, contribuindo e agregando ao crescimento do universo do que a marca oferece, fazendo com que o consumidor sinta-se parte do ambiente e desperte identificação com relação à identidade visual.</p>
@@ -232,7 +232,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Estratégia de Marca <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Estratégia de Marca <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>A estratégia define a base estrutural que vai guiar todo o projeto conceitual, textual e visual. A estratégia determina também o posicionamento de marca, que define quem é você no meio de tantas outras marcas no mercado.</p>
@@ -263,7 +263,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Papelaria <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Papelaria <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>A papelaria da sua companhia é composta por todo o material impresso que você utiliza internamente ou com os seus clientes e público.</p>
@@ -284,7 +284,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Embalagens <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Embalagens <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>A primeira impressão é a que fica. E não adianta dizer que não julgamos pela capa, porque fazemos isso sim. Para comprovar, imagine o cenário: você está no supermercado e precisa ou quer adquirir um produto que nunca comprou antes e não possui nenhum conhecimento ou informação relevante a respeito das opções disponíveis. Por qual motivo você escolheria o produto, se o valor não importasse?</p>
@@ -295,7 +295,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Apresentações <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Apresentações <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>São muitos os objetivos para a criação de uma apresentação da sua empresa. Ela pode ter o foco comercial, que expõe produtos, auxiliando e dando suporte à equipe de vendas. Além disso, a apresentação pode servir para ser uma vitrine da visão, missão e dos valores da companhia e, ainda, ser utilizada para converter uma venda ou fechar um contrato.</p>
@@ -317,7 +317,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Catalógo ou cardápio <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Catalógo ou cardápio <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>O catálogo ou cardápio da companhia é uma vitrine com os produtos ou serviços oferecidos. Ele é extremamente importante para diversas áreas: restaurantes, bares, indústrias, lojas e comércios em geral.</p>
@@ -346,7 +346,7 @@ content_sub = ["<h4>Se você deseja se destacar no mercado e transmitir uma imag
 content_items = [""]
 +++
 
-{{ page_callout(has_image=true, image="./identidade-visual.webp") }}
+{{ page_callout(has_image=true, image="/wda-html/design/identidade-visual.webp") }}
 {{ stickytext() }}
 {{ second_banner(has_items=true, has_images=true) }}
 {{ page_content(has_background=true) }}

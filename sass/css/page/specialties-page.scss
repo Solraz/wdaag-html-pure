@@ -94,6 +94,20 @@
 				color: map.get(theme.$colors, white);
 			}
 
+			half {
+				display: flex;
+				flex-flow: row;
+				gap: functions.rem(24);
+
+				> div {
+					width: calc(50% - functions.rem(24));
+
+					> h3 {
+						margin-bottom: functions.rem(12);
+					}
+				}
+			}
+
 			.content-wrapper {
 				flex-flow: column;
 				flex-wrap: wrap;
@@ -155,6 +169,15 @@
 						width: min(100%, functions.rem(600));
 					}
 				}
+			}
+		}
+
+		&.showcase {
+			display: flex;
+			flex-flow: row;
+
+			item {
+				width: calc(100% / 6);
 			}
 		}
 

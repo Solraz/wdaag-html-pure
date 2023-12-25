@@ -3,176 +3,35 @@ title = "WDA Agência Digital - Assistência de Marketing Digital"
 template = "specialties_page.html"
 
 [extra]
-banner = "Identidade Visual"
+banner = "Comunicação Visual"
 banner_extra = ""
 
-callout = "Para nós o design é estratégico"
-callout_sub = "A apresentação da sua marca com alto impacto visual fará toda a diferença na percepção do seu público sobre o seu propósito e valor."
+callout = "<h1>Identidade e Branding<br/> Significado e Valor.</h1>"
+callout_sub = "<h3>Referência e padrão para toda a sua campanha de comunicação.</h3>"
 
-2banner = "Resultados reais"
-2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
-2banner_items = [
-  """
-  <div class="item">
-    <img src="/img/logos/aline-vidal.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/alquimia-urban-living.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/autonomia-arqueologia.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/fixair.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/flamengo-park-towers.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/folguedo.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/gpcon-realizacoes.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/instituto-serpa.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/karla-nunes-fisioterapia.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/ltg-multiservicos.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/m3.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/mar-tratamento-capilar.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/moving-fit.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/n8-solutions.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/occa-life.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/pilialoha-waa.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/s2-navegacao.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/santa-rosa-open-residencial.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/sitio-cabure.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/terraco-corcovado.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/trip-rio.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/tuca.webp" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/social-burger.png" alt="" />
-  </div>
-  """,
-  """
-  <div class="item">
-    <img src="/img/logos/filha-da-terra.png" alt="" />
-  </div>
-  """,
-]
+2banner = "Qual é a imagem que você <s>quer</s> precisa transmitir?"
+2banner_extra = """<h4>Sabemos que a primeira impressão é a que fica.</h4>
+<h4>Trabalhamos para que a sua marca transmita os valores e a essência da sua empresa de forma clara e efetiva. Nosso objetivo é desenvolver uma identidade visual que reflita a personalidade da sua empresa e a diferencie da concorrência. Além disso, cuidamos para garantir que a mensagem da sua marca seja transmitida de forma coerente em todos os pontos de contato com o cliente.</h4>
+<h4>Se você está buscando uma transformação completa na imagem da sua empresa ou apenas ajustes pontuais na sua comunicação, a WDA.Ag é a escolha certa. Entre em contato conosco e descubra como podemos ajudar a sua empresa a alcançar o sucesso através da imagem.</h4>"""
 
-
-sticky = [[["h1", "O que fazemos"],
+sticky = [[["h1", "Você deve se perguntar"],
 """ 
   <ul>
-    <li>Branding Book</li>
-    <li>DNA da Marca</li>
-    <li>Tipologias e símbolos</li>
-    <li>Aplicações</li>
-    <li>Benchmark setorial</li>
-    <li>Imagens</li>
-    <li>Cores</li>
-    <li>Tipografias</li>
-    <li>Key Visual</li>
-    <li>Malha</li>
-    <li>Papelaria institucional</li>
-    <li>Identidade verbal (voz da marca, tag cloud)</li>
-    <li>Estilo linguístico (o discurso da marca)</li>
+    <li>Qual a percepção do consumidor em relação a sua marca?</li>
+    <li>Como seus colaboradores e parceiros enxergam o seu negócio?</li>
+    <li>Qual imagem a sua empresa passa para o público?</li>
   </ul>
-"""],
-[["h1", "Serviços relacionados ao branding"],
-""" 
-  <p>Se você quer que sua marca seja lembrada e reconhecida no mercado, o branding é a chave para o sucesso. A WDA.ag é especialista em construir marcas fortes e duradouras, que geram conexões emocionais com o público e aumentam a fidelidade dos clientes.</p>
-  <p>Com anos de experiência em branding, a WDA.ag sabe exatamente como posicionar sua marca de forma estratégica e criar uma identidade visual única e memorável. Utilizamos gatilhos mentais de conversão, como a prova social e a autoridade, para fortalecer a imagem da sua marca e aumentar a confiança dos consumidores.</p>
-  <p>Não perca mais tempo com uma marca genérica e sem personalidade. Invista em branding com a WDA.ag e veja como sua marca pode se destacar da concorrência e se tornar um verdadeiro sucesso. Entre em contato agora mesmo e comece a construir uma marca forte e duradoura.</p>
-""", "button"]]
+"""]]
 
 
-floating = [[["h1", "Como fazemos"],
-""" 
-  <ul>
-    <li><h3>Pesquisa</h3> Imersão no Universo da Marca, Mapeamento da Concorrência e Definição de Persona.</li>
-    <li><h3>Estratégia</h3> Definição de Posicionamento, Propósito, Nome, Logotipo, Identidade Visual e Verbal.</li>
-    <li><h3>Execução</h3> Lançamento da Marca, Criação de Campanha e peças com uma narrativa persuasiva.</li>
-  </ul>
-"""],
-[""" 
+floating = [
+["""
+  <h1>&nbsp;</h1>
+  <h4>Essas e outras questões são respondidas através do projeto de Branding / Rebranding que oferecemos aqui na WDA.</h4>
+  <h4>Nossa metodologia é baseada em quatro pilares principais:</h4>
   <accordion>
     <accordion-item>
-      <accordion-header class="h3">Criação de Identidade <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Estratégia <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <strong>Slogan</strong>
@@ -215,7 +74,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Key Visual | AD <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Identidade <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>Key visual é um tema gráfico que aparece em todos os materiais publicitários e meios de comunicação de uma marca ou de seu produto, serviço, evento. É distinguir a empresa da concorrência e, ao mesmo tempo, transmitir seus principais valores e provocar emoções apropriadas em um grupo específico de destinatários. É ser coerente, característico e único.</p>
@@ -224,7 +83,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Design <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Implementação <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>O design é uma importante parte da identidade visual do seu negócio e, todos estes elementos em conjunto, compõem o branding. Ele faz com que a padronização da imagem da sua empresa aconteça, contribuindo e agregando ao crescimento do universo do que a marca oferece, fazendo com que o consumidor sinta-se parte do ambiente e desperte identificação com relação à identidade visual.</p>
@@ -232,7 +91,7 @@ floating = [[["h1", "Como fazemos"],
       </accordion-content>
     </accordion-item>
     <accordion-item>
-      <accordion-header class="h3">Estratégia de Marca <img src="/img/plus-icon.svg" /></accordion-header>
+      <accordion-header class="h3">Gestão <img src="/wda-html/img/plus-icon.svg" /></accordion-header>
       <accordion-content>
         <div>
           <p>A estratégia define a base estrutural que vai guiar todo o projeto conceitual, textual e visual. A estratégia determina também o posicionamento de marca, que define quem é você no meio de tantas outras marcas no mercado.</p>
@@ -262,93 +121,59 @@ floating = [[["h1", "Como fazemos"],
         </div>
       </accordion-content>
     </accordion-item>
-    <accordion-item>
-      <accordion-header class="h3">Papelaria <img src="/img/plus-icon.svg" /></accordion-header>
-      <accordion-content>
-        <div>
-          <p>A papelaria da sua companhia é composta por todo o material impresso que você utiliza internamente ou com os seus clientes e público.</p>
-        </div>
-        <div>
-          <p>Ela pode também acompanhar os representantes da empresa e, ainda, ser distribuída para um grupo segmentado e selecionado de pessoas para dar mais força à sua marca. Além disso, a papelaria pode ser, inclusive, distribuída como brinde, em alguns casos. Alguns materiais que a compõem são:</p>
-        </div>
-        <div>
-          <ul>
-            <li>Cartões de visita</li>
-            <li>Papel timbrado</li>
-            <li>Pastas</li>
-            <li>Envelopes</li>
-            <li>Bloco de anotações</li>
-            <li>Receituários</li>
-          </ul>
-        </div>
-      </accordion-content>
-    </accordion-item>
-    <accordion-item>
-      <accordion-header class="h3">Embalagens <img src="/img/plus-icon.svg" /></accordion-header>
-      <accordion-content>
-        <div>
-          <p>A primeira impressão é a que fica. E não adianta dizer que não julgamos pela capa, porque fazemos isso sim. Para comprovar, imagine o cenário: você está no supermercado e precisa ou quer adquirir um produto que nunca comprou antes e não possui nenhum conhecimento ou informação relevante a respeito das opções disponíveis. Por qual motivo você escolheria o produto, se o valor não importasse?</p>
-        </div>
-        <div>
-          <p>Seja qual for o seu produto ou serviço disponibilizado, uma embalagem de qualidade faz toda a diferença na hora de atrair a atenção do seu consumidor, transmitindo valores, conceitos e qualidades da marca.</p>
-        </div>
-      </accordion-content>
-    </accordion-item>
-    <accordion-item>
-      <accordion-header class="h3">Apresentações <img src="/img/plus-icon.svg" /></accordion-header>
-      <accordion-content>
-        <div>
-          <p>São muitos os objetivos para a criação de uma apresentação da sua empresa. Ela pode ter o foco comercial, que expõe produtos, auxiliando e dando suporte à equipe de vendas. Além disso, a apresentação pode servir para ser uma vitrine da visão, missão e dos valores da companhia e, ainda, ser utilizada para converter uma venda ou fechar um contrato.</p>
-        </div>
-        <div>
-          <p>Independente do objetivo, elas têm uma função em comum: te auxiliar a passar a mensagem correta quando você estiver presente e, ainda mais importante, transmitir a mensagem quando você não estiver.</p>
-        </div>
-        <div>
-          <strong>O que as apresentações da WDA.AG incluem:</strong><br/><br/>
-
-          <ul>
-            <li>Planejamento e brainstorm (objetivos, público-alvo, linguagem)</li>
-            <li>Conteúdo feito por especialistas, com revisão ortográfica e dentro da norma culta da língua portuguesa</li>
-            <li>Arquitetura da informação</li>
-            <li>Criação (design que reforce o branding)</li>
-            <li>Suporte, alterações e negociação de produção.</li>
-          </ul>
-        </div>
-      </accordion-content>
-    </accordion-item>
-    <accordion-item>
-      <accordion-header class="h3">Catalógo ou cardápio <img src="/img/plus-icon.svg" /></accordion-header>
-      <accordion-content>
-        <div>
-          <p>O catálogo ou cardápio da companhia é uma vitrine com os produtos ou serviços oferecidos. Ele é extremamente importante para diversas áreas: restaurantes, bares, indústrias, lojas e comércios em geral.</p>
-        </div>
-        <div>
-          <p>O que chama a atenção, é que seu catálogo ou cardápio pode ser virtual ou impresso. Na versão física, existe uma série de efeitos e possibilidades. Porém, como quase tudo hoje é digital, existe a necessidade da migração para o online. Na internet, as possibilidades são infinitas e visibilidade e alcance acabam sendo muito maiores, se uma boa estratégia para divulgação for aplicada.</p>
-        </div>
-        <div>
-          <strong>Confira o nosso processo de produção dos catálogos ou cardápios:</strong><br/><br/>
-
-          <ul>
-            <li>Criação ou adaptação de identidade visual já existente para os produtos negociados</li>
-            <li>Tratamento de imagens e fotografias anteriores ou indicação e acompanhamento da produção de novas fotos</li>
-            <li>Conteúdo textual, com descrição e aspectos importantes de cada produto</li>
-            <li>Design alinhado com o branding da companhia</li>
-            <li>Suporte, alterações e negociação da produção.</li>
-          </ul>
-        </div>
-      </accordion-content>
-    </accordion-item>
   </accordion>
 """]]
 
-content = ["<h2>Uma identidade visual cuidadosamente elaborada pode ser o diferencial que sua marca precisa para se destacar no mercado, transmitindo confiança e profissionalismo aos clientes em potencial.</h2>"]
-content_sub = ["<h4>Se você deseja se destacar no mercado e transmitir uma imagem profissional e consistente, então entre em contato conosco e descubra o poder da identidade visual. Nós estamos prontos para criar uma identidade visual única e memorável para a sua marca e ajudá-la a alcançar todo o seu potencial de sucesso. Agende já uma consulta gratuita e comece a construir a sua marca hoje mesmo.</h4>"]
-content_items = [""]
+content = ["Principais elementos da comunicação visual"]
+content_sub = [""]
+content_items = [[
+  """
+    <h3>Consciência</h3>
+    <h4><strong>Torne a sua marca mais conhecida</strong></h4>
+    <p>Você quer que as pessoas saibam quem você é e o que oferece?<br/> As metas podem incluir:</p>
+    <ul>
+      <li>Reconhecimento da marca</li>
+      <li>Alcance de público com interesse no que você oferece</li>
+      <li>Visualização de videos e conteúdo</li>
+    </ul>
+  """,
+  """
+    <h3>Consideração</h3>
+    <h3><strong>Aumentar o engajamento</strong></h3>
+    <p>Você quer que alguém se envolva com seu produto, marca ou conteúdo? As metas podem incluir:</p>
+    <ul>
+      <li>Gerar tráfego para a sua landing page, site ou perfil</li>
+      <li>Melhore o engajamento com a sua página, postagem ou evento</li>
+      <li>Ampliar a quantidade de seguidores</li>
+    </ul>
+  """,
+  """
+    <h3>Conversão</h3>
+    <h4><strong>Impulsione as vendas</strong></h4>
+    <p>Você quer vender mais? As metas podem incluir:</p>
+    <ul>
+      <li>Aumentar o número de consultas e agendamentos</li>
+      <li>Aumentar as vendas do seu e-commerce</li>
+      <li>Gerar conversões off-line através da sua loja física</li>
+    </ul>
+  """,
+  """
+    <h3>Conversão</h3>
+    <h4><strong>Impulsione as vendas</strong></h4>
+    <p>Você quer vender mais? As metas podem incluir:</p>
+    <ul>
+      <li>Aumentar o número de consultas e agendamentos</li>
+      <li>Aumentar as vendas do seu e-commerce</li>
+      <li>Gerar conversões off-line através da sua loja física</li>
+    </ul>
+  """
+]]
+
+finalcallout = "<h2>A comunicação visual é capaz de encantar, engajar e persuadir. A função dela é <strong>transmitir a personalidade da sua marca</strong> e causar uma impressão emocional em seu público.</h2>"
 +++
 
-{{ page_callout(has_image=true, image="./identidade-visual.webp") }}
-{{ stickytext() }}
-{{ second_banner(has_items=true, has_images=true) }}
-{{ page_content(has_background=true) }}
+{{ page_callout(has_image=true, image="./comunicacao-visual.webp") }}
+{{ final_page_callout() }}
+{{ second_banner(has_items=true) }}
 {{ stickytext() }}
 {{ final_callout() }}
