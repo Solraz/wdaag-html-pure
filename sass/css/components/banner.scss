@@ -1,13 +1,11 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 banner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	height: max(80vh, functions.rem(600));
+	height: max(80vh, m.rem(600));
 	width: 100%;
 
 	position: relative;
@@ -16,7 +14,7 @@ banner {
 		display: flex;
 		flex-flow: column;
 
-		gap: functions.rem(25);
+		gap: m.rem(25);
 
 		h3 {
 			font-weight: 300;

@@ -11,6 +11,7 @@ callout_sub = "A apresentação da sua marca com alto impacto visual fará toda 
 
 2banner = "Resultados reais"
 2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
+test = "bitch"
 2banner_items = [
   """
   <div class="item">
@@ -346,7 +347,7 @@ content_sub = ["<h4>Se você deseja se destacar no mercado e transmitir uma imag
 content_items = [""]
 +++
 
-{{ page_callout(has_image=true, image="/wda-html/design/identidade-visual.webp") }}
+{{ page_callout(has_image=true, image="/design/identidade-visual.webp") }}
 {{ stickytext() }}
 {{ second_banner(has_items=true, has_images=true) }}
 {{ page_content(has_background=true) }}

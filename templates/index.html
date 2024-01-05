@@ -7,6 +7,7 @@
 <div class="background-wrapper-fixed">
   <div class="mirror"></div>
   <div class="content">
+    {% include "components/gradient-blob.html" %}
     <img src="{{get_url(path='img/blob-full.webp')}}" alt="">
     <img src="{{get_url(path='img/blob-half.webp')}}" alt="">
   </div>
@@ -15,90 +16,118 @@
 
 {% block banner %}
 <banner>
-  <div class="content-wrapper">
+  <div class="content-wrapper bigger">
     <div class="callout">
+      <h6>Criatividade com estratégia</h6>
       <h1 class="h0">marketing & criação <br /> ux / ui design <br /> tecnologia</h1>
-      <h3>
-        Assessoria de Marketing Digital 360°
-      </h3>
+      <h6>
+        Nossa assessoria de marketing é 360° e nosso propósito é muito claro: <strong>Cuidar da imagem e presença do seu
+          negócio.</strong>
+      </h6>
     </div>
   </div>
 </banner>
 {% endblock banner %}
 
 {% block content %}
+
+{{ section.content | safe }}
+
 <div class="services">
-  <div class="content-wrapper">
+  <div class="content-wrapper bigger">
     <div class="title">
-      <h2>O que fazemos</h2>
+      <h1>O que fazemos</h1>
       <divider-horizontal></divider-horizontal>
+      <h6>Estratégias de marketing, design e tecnologia, indispensáveis para todos os negócios. Especialmente o seu.
+      </h6>
     </div>
     <div class="content">
       <div class="card">
-        <h3 class="title" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body"
-          hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Marketing Digital</strong></h3>
+        <h1 class="title" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+          hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Marketing Digital</h1>
         <p class="text">Mais do que uma agência digital, nossa proposta é atuar como o time de marketing do seu negócio.
           Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
 
         <div class="leads">
-          <p hx-post="{{ get_url(path='/marketing/assessoria-de-marketing-digital') }}"
-            hx-trigger="click throttle:250ms" hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">
-            Assessoria de Marketing Digital</p>
-          <p hx-post="{{ get_url(path='/marketing/social-media-marketing') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Social Media Marketing</p>
-          <p hx-post="{{ get_url(path='/marketing/trafego-pago') }}" hx-trigger="click throttle:250ms" hx-target="body"
-            hx-swap="multi:body swap:250ms" hx-push-url="true">Tráfego Pago</p>
+          <h4 hx-post="{{ get_url(path='/marketing/assessoria-de-marketing-digital') }}"
+            hx-trigger="click throttle:250ms" hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main"
+            hx-push-url="true">
+            Assessoria de Marketing Digital</h4>
+          <h4 hx-post="{{ get_url(path='/marketing/social-media-marketing') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Social Media Marketing
+          </h4>
+          <h4 hx-post="{{ get_url(path='/marketing/trafego-pago') }}" hx-trigger="click throttle:250ms" hx-target="main"
+            hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Tráfego Pago</h6>
         </div>
       </div>
       <div class="card">
-        <h3 class="title" hx-post="{{ get_url(path='/design') }}" hx-trigger="click throttle:250ms" hx-target="body"
-          hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Design</strong></h3>
+        <h1 class="title" hx-post="{{ get_url(path='/design') }}" hx-trigger="click throttle:250ms" hx-target="main"
+          hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Design</h1>
         <p class="text">Somos um estúdio de criação especializado em comunicação visual, ilustração e projetos gráficos
           2D
           e
           3D</p>
 
         <div class="leads">
-          <p hx-post="{{ get_url(path='/design/identidade-visual') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Identidade Visual</p>
-          <p hx-post="{{ get_url(path='/design/comunicacao-visual') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Comunicação Visual</p>
-          <p>Design de Embalagem</p>
-          <p>Ilustração</p>
+          <h4 hx-post="{{ get_url(path='/design/identidade-visual') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Identidade Visual</h4>
+          <h4 hx-post="{{ get_url(path='/design/comunicacao-visual') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Comunicação Visual</h4>
+          <h4 hx-post="{{ get_url(path='/design/design-de-embalagem') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Design de Embalagem</h4>
+          <h4 hx-post="{{ get_url(path='/design/ilustracao') }}" hx-trigger="click throttle:250ms" hx-target="main"
+            hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Ilustração</h4>
         </div>
       </div>
       <div class="card">
-        <h3 class="title" hx-post="{{ get_url(path='/ux-ui-design') }}" hx-trigger="click throttle:250ms"
-          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>UX / UI Design</strong></h3>
+        <h1 class="title" hx-post="{{ get_url(path='/ux-ui-design') }}" hx-trigger="click throttle:250ms"
+          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">UX / UI Design</h1>
         <p class="text">Desenvolvemos ambientes e produtos através do estudo da usabilidade e experiência do usuário
           final.<br />
           Planejamos soluções e interações que promovem engajamento, conexão e conversão.</p>
 
         <div class="leads">
-          <p>Arquitetura de Informação</p>
-          <p>Design de Interface</p>
-          <p>Estratégia de Conteúdo</p>
+          <h4 hx-post="{{ get_url(path='/ux-ui-design/arquitetura-de-informacao') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Arquitetura de Informação</h4>
+          <h4 hx-post="{{ get_url(path='/ux-ui-design/design-de-interface') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Design de Interface</h4>
+          <h4 hx-post="{{ get_url(path='/ux-ui-design/estrategia-de-conteudo') }}" hx-trigger="click throttle:250ms"
+            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Estratégia de Conteúdo</p>
         </div>
       </div>
       <div class="card">
-        <h3 class="title" hx-post="{{ get_url(path='/desenvolvimento') }}" hx-trigger="click throttle:250ms"
-          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true"><strong>Desenvolvimento</strong></h3>
+        <h1 class="title" hx-post="{{ get_url(path='/desenvolvimento') }}" hx-trigger="click throttle:250ms"
+          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Desenvolvimento</h1>
         <p class="text">Materializamos as suas ideias. <br />
           Seja um e-commerce, um site ou aplicativo, nossa equipe atuará no planejamento, na concepção e no
           desenvolvimento
           através de metodologias ágeis e emergentes.</p>
 
         <div class="leads">
-          <p>Criação de Sites</p>
-          <p>Landing Pages</p>
-          <p>E-Commerce</p>
-          <p>Criação de Aplicativos</p>
+          <h4>Criação de Sites</h4>
+          <h4>Landing Pages</h4>
+          <h4>E-Commerce</h4>
+          <h4>Criação de Aplicativos</h4>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-{{ section.content | safe }}
+<div class="wdaag">
+  <div class="content-wrapper smaller">
+    <div class="header">
+      <h2 class="h0">#wda</br>ag</h2>
+      <h3>Combinamos <strong>inovação e tecnologia</strong> com profundo conhecimento de mídia moderna, cultura
+        contemporânea e dados
+        do cliente, para contar histórias que conectam marcas e consumidores.</h3>
+    </div>
+    <div class="description">
+      <h5>Criamos produtos digitais e experiências online personalizadas e sob medida. O que a sua marca é, o que
+        representa, faz e fala. Nossa proposta é ajudar a sua empresa a conquistar visibilidade e autoridade na
+        internet. Aqui a gente cuida da presença digital da sua marca.</h5>
+    </div>
+  </div>
+</div>
 
 {% endblock content %}

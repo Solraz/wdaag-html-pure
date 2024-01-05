@@ -1,6 +1,4 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 nav {
 	display: flex;
@@ -8,19 +6,45 @@ nav {
 
 	width: 100%;
 
-	padding: functions.rem(12);
+	padding: m.rem(32) 0;
 
 	position: fixed;
 	top: 0;
 	left: 0;
 
-	z-index: 5;
+	z-index: 6;
 
-	background-color: map.get(theme.$colors, main);
+	background-color: transparent;
+
+	transition: padding 125ms linear, background-color 125ms;
+
+	> svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		height: 100%;
+		width: 100%;
+
+		z-index: -1;
+
+		display: none;
+	}
+
+	&.moving {
+		padding: m.rem(24) 0 m.rem(24);
+
+		background-color: transparentize(m.get(m.$colors, black), 0.5);
+		backdrop-filter: blur(m.rem(24));
+
+		> svg {
+			display: flex;
+		}
+	}
 
 	> .content-wrapper {
 		> img {
-			height: functions.rem(36);
+			height: m.rem(24);
 			width: auto;
 
 			margin-right: auto;
@@ -31,8 +55,8 @@ nav {
 			flex-flow: column;
 			justify-content: space-between;
 
-			height: functions.rem(24);
-			width: functions.rem(24);
+			height: m.rem(16);
+			width: m.rem(16);
 
 			border: 0px solid transparent;
 
@@ -46,7 +70,7 @@ nav {
 				height: 2px;
 				width: 100%;
 
-				background-color: map.get(theme.$colors, white);
+				background-color: m.get(m.$colors, white);
 
 				position: relative;
 
@@ -59,12 +83,12 @@ nav {
 
 					position: absolute;
 
-					right: functions.rem(36);
+					right: m.rem(36);
 
 					height: 2px;
 					width: 100%;
 
-					background-color: map.get(theme.$colors, white);
+					background-color: m.get(m.$colors, white);
 				}
 
 				&:nth-child(1) {
@@ -80,59 +104,119 @@ nav {
 					width: 65%;
 
 					&::before {
-						right: functions.rem(36);
+						right: m.rem(36);
 					}
 				}
 			}
 
 			&:hover {
 				> span {
-					right: functions.rem(-36);
+					right: m.rem(-36);
 				}
+			}
+		}
+
+		closer {
+			cursor: pointer;
+			display: none;
+
+			img {
+				height: m.rem(16);
+			}
+		}
+	}
+
+	&.navigation {
+		background: transparent;
+		background-color: transparentize(m.get(m.$colors, black), 1);
+		backdrop-filter: blur(m.rem(0));
+
+		> svg {
+			display: none;
+		}
+
+		padding: m.rem(48) 0;
+
+		> .content-wrapper {
+			.opener {
+				display: none;
+			}
+			closer {
+				display: flex;
 			}
 		}
 	}
 }
 
-main.navigation {
-	transform: scale(0.8);
-	// position: fixed;
-	left: -15%;
-	top: 0%;
-}
+// main.navigation {
+// transform: scale(0.8);
+// position: fixed;
+// 	left: -15%;
+// 	top: 0%;
+// }
 
 oob-nav {
 	display: flex;
-	flex-flow: column;
 	justify-content: center;
-	align-items: end;
-	gap: functions.rem(48);
+	align-items: center;
 
 	position: fixed;
+	top: 0;
 
-	z-index: -1;
+	z-index: 5;
 
-	height: 100%;
-	width: 100%;
+	height: 0;
+	width: 0;
 
-	background-color: map.get(theme.$colors, primary);
+	background-color: transparent;
 
-	opacity: 1;
+	opacity: 0;
 
-	transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+	transition: opacity 125ms linear, background-color 125ms linear,
+		height 250ms linear, width 0ms linear 125ms;
 
-	a {
-		transform: translate3d(max(-10vw, functions.rem(-90)), 0, 0);
-		color: map.get(theme.$colors, white);
+	> .content-wrapper {
+		flex-flow: column;
+		justify-content: center;
+		align-items: start;
+		gap: m.rem(12);
+
+		z-index: 5;
+
+		> a {
+			color: m.get(m.$colors, white);
+			cursor: pointer;
+
+			&.h3 {
+				margin-top: m.rem(16);
+			}
+
+			&.h0 {
+				line-height: 0.8;
+			}
+
+			&:hover {
+				color: m.get(m.$colors, primary);
+			}
+		}
 	}
 
-	closer {
+	> svg {
 		position: absolute;
-		top: 36px;
-		right: 36px;
+		height: 100%;
+		width: 100%;
+	}
 
-		img {
-			height: 36px;
-		}
+	&.navigation {
+		opacity: 1;
+
+		height: 100%;
+		width: 100%;
+
+		background-color: transparentize(m.get(m.$colors, black), 0.5);
+		backdrop-filter: blur(m.rem(16));
+
+		transition: opacity 125ms linear, background-color 125ms linear,
+			height 250ms linear, width 0ms linear 0ms;
 	}
 }

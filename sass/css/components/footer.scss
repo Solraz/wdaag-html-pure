@@ -1,45 +1,93 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 footer {
 	display: flex;
+	flex-flow: column;
 
-	background-color: map.get(theme.$colors, black);
-	padding: functions.rem(64) 0 functions.rem(64);
+	background-color: black;
+	padding: m.rem(0) 0 m.rem(64);
 
 	.content-wrapper {
 		flex-flow: column;
-		gap: functions.rem(24);
+		gap: m.rem(24);
+	}
+
+	footer-carousel {
+		@include m.flex;
+		flex-wrap: nowrap;
+
+		> footer-carousel-container {
+			@include m.flex;
+			flex-wrap: nowrap;
+			justify-content: start;
+
+			position: relative;
+
+			z-index: 2;
+
+			width: 100%;
+
+			background-color: black;
+
+			overflow: hidden;
+
+			> .items-container {
+				@include m.flex;
+				justify-content: start;
+				flex-wrap: nowrap;
+
+				width: calc(23 * m.rem(200));
+
+				position: relative;
+
+				animation-name: footer-carousel;
+				animation-delay: 0;
+				animation-duration: 60s;
+				animation-fill-mode: forwards;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			.item {
+				width: m.rem(200);
+				height: auto;
+
+				img {
+					height: m.rem(125);
+					width: auto;
+				}
+			}
+		}
 	}
 
 	.footer-content {
-		display: flex;
-		flex-flow: row;
-		flex-wrap: wrap;
+		@include m.flex;
 		justify-content: space-between;
-		align-items: center;
-		gap: functions.rem(24);
+		gap: m.rem(24);
 
 		> div {
-			min-width: functions.rem(228);
+			min-width: m.rem(228);
 		}
 
 		.contact {
 			display: flex;
 			flex-flow: column;
-			gap: functions.rem(12);
+			gap: m.rem(12);
 
 			.social-media {
 				display: flex;
 				justify-content: start;
 				align-items: center;
-				gap: functions.rem(12);
+				gap: m.rem(12);
 
 				img {
 					object-fit: cover;
-					height: functions.rem(24);
+					height: m.rem(18);
 					width: auto;
+				}
+
+				img:nth-child(4) {
+					height: m.rem(16);
 				}
 			}
 		}
@@ -51,5 +99,23 @@ footer {
 		.other-topics > p {
 			font-weight: 500;
 		}
+	}
+}
+
+@keyframes footer-carousel {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes footer-carousel-2 {
+	0% {
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
 	}
 }

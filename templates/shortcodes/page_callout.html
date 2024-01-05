@@ -12,7 +12,7 @@
     </div>
     {% if has_image %}
     <div class="image">
-      <img src="{{image}}" alt="">
+      <img src="{{get_url(path='' ~ image ~ '')}}" alt="">
     </div>
     {% endif %}
   </div>

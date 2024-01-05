@@ -1,8 +1,19 @@
 <oob-nav>
-  <closer><img src="{{ get_url(path='img/x-icon.svg') }}" alt=""></closer>
-  <a hx-post="{{ get_url(path='/') }}" hx-trigger="click throttle:250ms" hx-target="body">cases</a>
-  <a hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body">o que fazemos</a>
-  <a hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body">sobre</a>
-  <a hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body">orçamento</a>
-  <a hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="body">vagas</a>
+  {% include "components/gradient-nav.html" %}
+  <div class="content-wrapper bigger">
+    <a class="h0" hx-post="{{ get_url(path='/') }}" hx-trigger="click throttle:250ms" hx-target="main" hx-select="main"
+      hx-swap="outerHTML">cases</a>
+    <a class="h0" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+      hx-select="main" hx-swap="outerHTML">o que
+      fazemos</a>
+    <a class="h0" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+      hx-select="main" hx-swap="outerHTML">sobre</a>
+    <a class="h0" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+      hx-select="main" hx-swap="outerHTML">orçamento</a>
+    <a class="h0" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+      hx-select="main" hx-swap="outerHTML">vagas</a>
+    <a class="h3" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
+      hx-select="main" hx-swap="outerHTML">entre
+      pro time</a>
+  </div>
 </oob-nav>

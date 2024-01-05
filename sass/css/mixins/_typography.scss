@@ -1,26 +1,16 @@
-@use "sass:map";
-@use "theme";
-@use "functions";
+@use "mixins" as m;
 
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-// @font-face {
-// 	font-family: "Urbanist";
-// 	src: url("/fonts/Urbanist.ttf") format("truetype");
-// }
-
-// @font-face {
-// 	font-family: "Urbanist";
-// 	font-style: italic;
-// 	src: url("/fonts/Urbanist-Italic.ttf") format("truetype");
-// }
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 @mixin Urbanist {
 	font-family: "Urbanist", sans-serif;
 }
+@mixin Manrope {
+	font-family: "Manrope", sans-serif;
+}
 
 html {
-	@include Urbanist;
 	font-size: 16px;
 
 	@media (min-width: 1920px) {
@@ -28,12 +18,12 @@ html {
 	}
 }
 
-$sizes: map.get(theme.$fonts, sizes);
+$sizes: m.get(m.$fonts, sizes);
 
 @for $i from 0 through 6 {
 	h#{$i},
 	.h#{$i} {
-		$size: map.get($sizes, h#{$i});
+		$size: m.get($sizes, h#{$i});
 
 		$sizemin: $size + rem;
 		$sizevw: $size * 1 + vw;
@@ -44,12 +34,19 @@ $sizes: map.get(theme.$fonts, sizes);
 
 		@if ($i == 1 or $i == 0) {
 			line-height: clamp($sizemin * 1, $fluid * 1.1, $sizemax * 1.1);
-			letter-spacing: calc(0.01 * $size) + rem;
+			letter-spacing: calc(-0.01 * $size) + rem;
 			font-weight: 600;
 		} @else {
 			line-height: clamp($sizemin * 1.1, $fluid * 1.5, $sizemax * 1.33);
 			letter-spacing: calc(0.075 * $size) + rem;
 			font-weight: 300;
+		}
+
+		@if ($i == 1 or $i == 0 or $i == 2) {
+			@include Urbanist;
+		}
+		else {
+			@include Manrope;
 		}
 	}
 
@@ -60,10 +57,10 @@ $sizes: map.get(theme.$fonts, sizes);
 		div,
 		button,
 		a {
-			@include Urbanist;
+			@include Manrope;
 			text-decoration: none;
 
-			$size: map.get($sizes, h#{$i});
+			$size: m.get($sizes, h#{$i});
 
 			$sizemin: calc($size * 0.9) + rem;
 			$sizevw: $size * 1 + vw;
@@ -72,7 +69,7 @@ $sizes: map.get(theme.$fonts, sizes);
 
 			font-size: clamp($sizemin, $fluid, $sizemax);
 			line-height: clamp($sizemin * 1.1, $fluid * 1.5, $sizemax * 1.33);
-			letter-spacing: calc(0.1 * $size) + rem;
+			letter-spacing: calc(-0.005 * $size) + rem;
 
 			font-weight: 300;
 		}

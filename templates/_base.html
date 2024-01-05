@@ -11,12 +11,12 @@
 	{% block custom_style %}
 	{% endblock custom_style %}
 
-	{% include "components/nav.html" %}
+	<navigation>
+		{% include "components/nav.html" %}
+		{% include "components/menu.html" %}
+	</navigation>
 
 	<main id="main">
-
-		{% include "components/menu.html" %}
-
 		{% block background %}
 		{% endblock background %}
 
@@ -25,7 +25,6 @@
 
 		{% block content %}
 		{% endblock content %}
-
 
 		{{ macros::footer() }}
 	</main>

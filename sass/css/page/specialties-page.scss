@@ -1,13 +1,11 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 .specialties-content {
-	background-color: map.get(theme.$colors, white);
-	color: map.get(theme.$colors, main);
+	background-color: m.get(m.$colors, white);
+	color: m.get(m.$colors, main);
 
 	section {
-		padding: functions.rem(48) functions.rem(12) functions.rem(48);
+		padding: m.rem(48) m.rem(12) m.rem(48);
 
 		p,
 		div,
@@ -24,18 +22,18 @@
 		}
 
 		&.callout-page {
-			background-color: map.get(theme.$colors, white);
+			background-color: m.get(m.$colors, white);
 			text-align: center;
 
 			divider-horizontal {
-				background-color: map.get(theme.$colors, primary);
-				width: functions.rem(192);
-				height: functions.rem(1);
+				background-color: m.get(m.$colors, primary);
+				width: m.rem(192);
+				height: m.rem(1);
 			}
 
 			&:not(.has-image) {
 				> .content-wrapper {
-					width: clamp(functions.rem(312), 90vw, functions.rem(960));
+					width: clamp(m.rem(312), 90vw, m.rem(960));
 				}
 			}
 
@@ -43,7 +41,7 @@
 				display: flex;
 				flex-flow: column;
 				align-items: center;
-				gap: functions.rem(24);
+				gap: m.rem(24);
 			}
 
 			.image {
@@ -52,6 +50,8 @@
 
 			&.has-image {
 				> .content-wrapper {
+					gap: m.rem(64);
+
 					.text {
 						text-align: left;
 						align-items: start;
@@ -63,47 +63,82 @@
 						justify-content: center;
 						align-items: center;
 
-						height: functions.rem(200);
-						width: functions.rem(500);
+						height: m.rem(200);
+						width: m.rem(500);
 						position: relative;
 
+						flex-grow: 1;
+						flex-shrink: 0;
+
 						img {
-							height: 250%;
+							height: 200%;
 							width: auto;
 
 							position: absolute;
-							top: -100%;
+							top: -75%;
 						}
 					}
+				}
+
+				@media (max-width: m.rem(1100)) {
+					> .content-wrapper {
+						flex-flow: column;
+						justify-content: center;
+						align-items: center;
+
+						.image {
+							height: auto;
+							width: 100%;
+
+							img {
+								position: relative;
+								top: 0;
+								width: auto;
+								height: auto;
+
+								max-height: m.rem(400);
+							}
+						}
+					}
+
+					padding: m.rem(60) 0 0 0;
 				}
 			}
 		}
 
 		&.pages-sales-pitch {
 			text-align: center;
-			padding: functions.rem(64) 0;
+			padding: m.rem(64) 0;
 
 			divider-horizontal {
-				background-color: map.get(theme.$colors, primary);
-				width: functions.rem(192);
-				height: functions.rem(1);
+				background-color: m.get(m.$colors, primary);
+				width: m.rem(192);
+				height: m.rem(1);
 			}
 
 			&.has-background {
-				background-color: map.get(theme.$colors, main);
-				color: map.get(theme.$colors, white);
+				background-color: m.get(m.$colors, main);
+				color: m.get(m.$colors, white);
 			}
 
 			half {
 				display: flex;
 				flex-flow: row;
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
 				> div {
-					width: calc(50% - functions.rem(24));
+					width: calc(50% - m.rem(24));
 
 					> h3 {
-						margin-bottom: functions.rem(12);
+						margin-bottom: m.rem(12);
+					}
+				}
+
+				@media (max-width: m.rem(900)) {
+					flex-flow: column;
+
+					> div {
+						width: 100%;
 					}
 				}
 			}
@@ -114,24 +149,24 @@
 				align-items: center;
 				justify-content: center;
 
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
 				> h3 {
-					margin-bottom: functions.rem(48);
+					margin-bottom: m.rem(48);
 				}
 			}
 
 			mark {
-				background-color: map.get(theme.$colors, white);
-				color: map.get(theme.$colors, main);
+				background-color: m.get(m.$colors, white);
+				color: m.get(m.$colors, main);
 			}
 
 			::marker {
-				color: map.get(theme.$colors, white);
+				color: m.get(m.$colors, white);
 			}
 
 			ul {
-				gap: functions.rem(12);
+				gap: m.rem(12);
 			}
 
 			.sales-body {
@@ -140,9 +175,9 @@
 				flex-wrap: wrap;
 				justify-content: center;
 
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
-				@media (max-width: functions.rem(1304)) {
+				@media (max-width: m.rem(1304)) {
 					flex-flow: column;
 					align-items: center;
 				}
@@ -155,18 +190,18 @@
 
 					text-align: left;
 
-					gap: functions.rem(24);
+					gap: m.rem(24);
 
-					width: max(calc(33% - functions.rem(24)), functions.rem(312));
+					width: max(calc(33% - m.rem(24)), m.rem(312));
 
-					background-color: map.get(theme.$colors, primary);
-					color: map.get(theme.$colors, white);
+					background-color: m.get(m.$colors, primary);
+					color: m.get(m.$colors, white);
 
-					padding: functions.rem(48) functions.rem(36);
-					border-radius: functions.rem(24);
+					padding: m.rem(48) m.rem(36);
+					border-radius: m.rem(24);
 
-					@media (max-width: functions.rem(1304)) {
-						width: min(100%, functions.rem(600));
+					@media (max-width: m.rem(1304)) {
+						width: min(100%, m.rem(600));
 					}
 				}
 			}
@@ -175,9 +210,21 @@
 		&.showcase {
 			display: flex;
 			flex-flow: row;
+			flex-wrap: wrap;
+			gap: 0;
+			padding: 0;
+
+			height: m.rem(600);
 
 			item {
 				width: calc(100% / 6);
+				height: 50%;
+
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 
@@ -187,14 +234,14 @@
 				flex-wrap: wrap;
 				align-items: start;
 				justify-content: center;
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
 				position: relative;
 
 				> div {
-					width: max(functions.rem(296), calc(50% - functions.rem(24)));
+					width: max(m.rem(296), calc(50% - m.rem(24)));
 
-					@media (max-width: functions.rem(737)) {
+					@media (max-width: m.rem(737)) {
 						width: 100%;
 					}
 				}
@@ -203,18 +250,18 @@
 			.sticky {
 				display: flex;
 				flex-flow: column;
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
 				position: sticky;
-				top: functions.rem(72);
+				top: m.rem(72);
 
-				@media (max-width: functions.rem(737)) {
+				@media (max-width: m.rem(737)) {
 					position: relative;
 					top: 0;
 				}
 
 				h3 {
-					color: map.get(theme.$colors, primary);
+					color: m.get(m.$colors, primary);
 					font-weight: 500;
 				}
 			}
@@ -222,7 +269,7 @@
 			.sales-body {
 				display: flex;
 				flex-flow: column;
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
 				h3 {
 					font-weight: 500;
@@ -238,10 +285,10 @@
 
 			text-align: left;
 
-			gap: functions.rem(12);
+			gap: m.rem(12);
 
-			margin-left: functions.rem(12);
-			margin-bottom: functions.rem(24);
+			margin-left: m.rem(12);
+			margin-bottom: m.rem(24);
 		}
 
 		accordion {
@@ -255,17 +302,17 @@
 				justify-content: space-between;
 				align-items: center;
 
-				padding: functions.rem(12) functions.rem(15);
+				padding: m.rem(12) m.rem(15);
 
 				cursor: pointer;
 
 				img {
 					transition: transform 125ms cubic-bezier(0.47, 0, 0.745, 0.715);
-					height: functions.rem(18);
+					height: m.rem(18);
 				}
 
 				&:hover {
-					color: map.get(theme.$colors, primary);
+					color: m.get(m.$colors, primary);
 				}
 
 				&.active {
@@ -274,7 +321,7 @@
 					}
 
 					+ accordion-content {
-						max-height: functions.rem(1600);
+						max-height: m.rem(1600);
 						transform: scale3d(1, 1, 1);
 					}
 				}
@@ -286,9 +333,9 @@
 				justify-content: start;
 				align-items: start;
 
-				gap: functions.rem(18);
+				gap: m.rem(18);
 
-				padding: functions.rem(12) functions.rem(24);
+				padding: m.rem(12) m.rem(24);
 
 				transform-origin: top;
 				transform: scale3d(1, 0, 1);
@@ -309,13 +356,76 @@
 			flex-flow: column;
 		}
 
-		height: max(40vh, functions.rem(300));
-		background-color: map.get(theme.$colors, grey);
+		height: max(40vh, m.rem(300));
+		background-color: m.get(m.$colors, grey);
 	}
 
 	banner.inner-banner {
-		background-color: map.get(theme.$colors, main);
-		color: map.get(theme.$colors, white);
+		background-color: m.get(m.$colors, main);
+		color: m.get(m.$colors, white);
+
+		.background {
+			z-index: 0;
+
+			position: absolute;
+
+			height: 100%;
+			width: 100%;
+
+			overflow: hidden;
+
+			.mirror {
+				position: absolute;
+
+				z-index: 2;
+
+				width: 100%;
+				height: 100%;
+
+				backdrop-filter: blur(m.rem(12)) opacity(1);
+				background-color: transparentize(m.get(m.$colors, main), 0.9);
+			}
+
+			svg {
+				position: absolute;
+				z-index: 3;
+			}
+
+			.content {
+				z-index: 1;
+
+				height: 100%;
+				width: 100%;
+
+				&.parallax {
+					height: 200%;
+				}
+			}
+
+			video {
+				width: 100%;
+				position: absolute;
+			}
+
+			&.background-with-image {
+				.mirror {
+					backdrop-filter: blur(m.rem(12)) opacity(1);
+					background-color: transparentize(m.get(m.$colors, main), 0.5);
+				}
+
+				img {
+					position: absolute;
+					width: 100%;
+
+					background-color: m.get(m.$colors, main);
+				}
+
+				+ div {
+					background-color: transparent;
+					z-index: 2;
+				}
+			}
+		}
 
 		p,
 		div,
@@ -332,17 +442,17 @@
 		}
 
 		divider-horizontal {
-			background-color: map.get(theme.$colors, primary);
-			width: functions.rem(200);
-			height: functions.rem(1);
+			background-color: m.get(m.$colors, primary);
+			width: m.rem(200);
+			height: m.rem(1);
 		}
 
 		> .content-wrapper {
-			width: clamp(functions.rem(312), 90vw, functions.rem(1560));
+			width: clamp(m.rem(312), 90vw, m.rem(1560));
 		}
 
 		&.has-items {
-			padding: functions.rem(64) 0;
+			padding: m.rem(64) 0;
 			height: auto;
 		}
 
@@ -351,7 +461,11 @@
 
 			.items {
 				.item {
-					width: max(calc(16.6667% - functions.rem(24)), functions.rem(108));
+					width: max(calc(16.6667% - m.rem(24)), m.rem(108));
+
+					&.bigger {
+						width: max(calc(50% - m.rem(24)), m.rem(312));
+					}
 
 					img {
 						height: auto;
@@ -371,7 +485,7 @@
 			justify-content: center;
 			align-items: start;
 
-			gap: functions.rem(24);
+			gap: m.rem(24);
 
 			.item {
 				display: flex;
@@ -379,11 +493,11 @@
 				justify-content: center;
 				align-items: center;
 
-				gap: functions.rem(24);
+				gap: m.rem(24);
 
-				width: max(calc(33% - functions.rem(24)), functions.rem(312));
+				width: max(calc(33% - m.rem(24)), m.rem(312));
 
-				@media (max-width: functions.rem(1304)) {
+				@media (max-width: m.rem(1304)) {
 					width: 100%;
 				}
 			}
@@ -391,7 +505,7 @@
 	}
 
 	banner.final-callout {
-		background-color: map.get(theme.$colors, white);
+		background-color: m.get(m.$colors, white);
 
 		p,
 		div,

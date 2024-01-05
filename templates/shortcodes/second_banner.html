@@ -3,6 +3,24 @@
 {% endif %}
 
 <banner class="inner-banner {% if has_items %}has-items{% endif %}{% if has_images %} has-images{% endif %}">
+  {% if section.extra.2banner_bg %}
+  <div class="background background-with-image">
+    {% include "components/gradient-specialties.html" %}
+    <div class="mirror"></div>
+    <div class="content parallax">
+      <img class="" src="{{ section.extra.2banner_bg }}"></img>
+    </div>
+  </div>
+  {% endif %}
+  {% if section.extra.2banner_video %}
+  <div class="background background-with-video">
+    {% include "components/gradient-specialties.html" %}
+    <div class="mirror"></div>
+    <div class="content parallax more-parallax">
+      <video class="" src="{{ section.extra.2banner_video }}" autoplay muted loop></video>
+    </div>
+  </div>
+  {% endif %}
   <div class="content-wrapper">
     <div class="callout">
       <h1>{{ section.extra.2banner | safe }}</h1>

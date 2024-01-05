@@ -6,47 +6,32 @@ template = "specialties_page.html"
 banner = "Design de Embalagem"
 banner_extra = ""
 
-callout = "A embalagem pode servir a um propósito funcional. <br/> Mas é uma ferramenta imensamente valiosa nos esforços de marketing e marca de uma empresa"
+callout = "<h3>A embalagem pode servir a um propósito funcional. <br/> Mas é uma ferramenta imensamente valiosa nos esforços de marketing e marca de uma empresa</h3>"
 callout_sub = ""
 
-2banner = "Resultados reais"
-2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
+2banner = "Evocar emoções é fundamental"
+2banner_items = [
+  """
+  <div class="item bigger">
+    <p>A embalagem possui um papel essencial no marketing e design de produtos, sendo um meio natural para despertar a atenção do cliente em relação a um produto que ainda não foi adquirido.</p>
+    <p>Inicialmente, a embalagem representa o primeiro contato visual que um consumidor tem com um produto. Ela é a face visível da marca, transmitindo efetivamente os valores, a qualidade e a proposta do produto. Através do uso de cores, tipografia, imagens e materiais, a embalagem tem o poder de comunicar o posicionamento da marca no mercado e estabelecer uma conexão emocional com o consumidor.</p>
+    <p>Além disso, a embalagem desempenha um papel crucial na diferenciação do produto diante da concorrência. Em um mercado repleto de opções, uma embalagem bem elaborada e atrativa pode se destacar e capturar a atenção do consumidor, motivando-o a experimentar o produto.</p>
+  </div>
+"""]
 
-sticky = [[["h1", "O que fazemos"],
+sticky = [[["h1", "Experiência"],
 """ 
-  <ul>
-    <li>Branding Book</li>
-    <li>DNA da Marca</li>
-    <li>Tipologias e símbolos</li>
-    <li>Aplicações</li>
-    <li>Benchmark setorial</li>
-    <li>Imagens</li>
-    <li>Cores</li>
-    <li>Tipografias</li>
-    <li>Key Visual</li>
-    <li>Malha</li>
-    <li>Papelaria institucional</li>
-    <li>Identidade verbal (voz da marca, tag cloud)</li>
-    <li>Estilo linguístico (o discurso da marca)</li>
-  </ul>
-"""],
-[["h1", "Serviços relacionados ao branding"],
-""" 
-  <p>Se você quer que sua marca seja lembrada e reconhecida no mercado, o branding é a chave para o sucesso. A WDA.ag é especialista em construir marcas fortes e duradouras, que geram conexões emocionais com o público e aumentam a fidelidade dos clientes.</p>
-  <p>Com anos de experiência em branding, a WDA.ag sabe exatamente como posicionar sua marca de forma estratégica e criar uma identidade visual única e memorável. Utilizamos gatilhos mentais de conversão, como a prova social e a autoridade, para fortalecer a imagem da sua marca e aumentar a confiança dos consumidores.</p>
-  <p>Não perca mais tempo com uma marca genérica e sem personalidade. Invista em branding com a WDA.ag e veja como sua marca pode se destacar da concorrência e se tornar um verdadeiro sucesso. Entre em contato agora mesmo e comece a construir uma marca forte e duradoura.</p>
+  Nossa abordagem é baseada em uma cuidadosa análise do seu público-alvo, concorrência e tendências de mercado. Combinamos essa pesquisa minuciosa com nossa experiência em design, explorando elementos visuais, cores, formas e materiais para criar embalagens que transmitam a essência da sua marca de forma impactante.
 """, "button"]]
 
 
-floating = [[["h1", "Como fazemos"],
-""" 
-  <ul>
-    <li><h3>Pesquisa</h3> Imersão no Universo da Marca, Mapeamento da Concorrência e Definição de Persona.</li>
-    <li><h3>Estratégia</h3> Definição de Posicionamento, Propósito, Nome, Logotipo, Identidade Visual e Verbal.</li>
-    <li><h3>Execução</h3> Lançamento da Marca, Criação de Campanha e peças com uma narrativa persuasiva.</li>
-  </ul>
-"""],
-[]]
+floating = [[
+"""
+  <h1>&nbsp;</h1>
+  <p>Uma embalagem bem planejada também tem a capacidade de transmitir informações relevantes sobre o produto de maneira clara e objetiva. Através do uso de elementos gráficos e textuais, é possível destacar os benefícios, características e instruções de uso do produto, facilitando a compreensão e a tomada de decisão por parte do consumidor.</p>
+    <p>Adicionalmente, a embalagem pode ser concebida para proporcionar uma experiência sensorial ao cliente. Por exemplo, a seleção cuidadosa dos materiais, texturas, fragrâncias e sons presentes na embalagem podem criar uma experiência tátil e emocional, envolvendo o consumidor e despertando sua curiosidade e interesse pelo produto.</p>
+    <p>É importante ressaltar que uma embalagem bem projetada não apenas atrai a atenção do cliente, mas também contribui para a construção da imagem da marca. Uma embalagem de qualidade transmite profissionalismo, cuidado e atenção ao produto, estabelecendo confiança e fidelidade por parte do consumidor.</p>
+"""]]
 
 content = ["<h2>Embalagem: <br/> o meio de marketing esquecido</h2>"]
 content_sub = ["""<half><div><h3>Afinal, o que é a embalagem do produto?</h3><p>O design da embalagem do produto refere-se à criação do exterior de um produto. Isso inclui escolhas de material e forma, bem como gráficos, cores e fontes que são usadas em embalagens, uma caixa, uma lata, uma garrafa ou qualquer tipo de recipiente.</p></div>
@@ -54,7 +39,7 @@ content_sub = ["""<half><div><h3>Afinal, o que é a embalagem do produto?</h3><p
 content_items = [""]
 +++
 
-{{ page_callout(has_image=true, image="./design-de-embalagem.webp") }}
+{{ page_callout(has_image=true, image="/design/design-de-embalagem.webp") }}
 {{ page_content() }}
 {{ showcase() }}
 {{ second_banner(has_items=true, has_images=true) }}

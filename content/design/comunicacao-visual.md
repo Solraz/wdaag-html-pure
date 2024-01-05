@@ -172,7 +172,7 @@ content_items = [[
 finalcallout = "<h2>A comunicação visual é capaz de encantar, engajar e persuadir. A função dela é <strong>transmitir a personalidade da sua marca</strong> e causar uma impressão emocional em seu público.</h2>"
 +++
 
-{{ page_callout(has_image=true, image="./comunicacao-visual.webp") }}
+{{ page_callout(has_image=true, image="/design/comunicacao-visual.webp") }}
 {{ final_page_callout() }}
 {{ second_banner(has_items=true) }}
 {{ stickytext() }}

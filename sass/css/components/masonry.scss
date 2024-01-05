@@ -1,10 +1,8 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 .masonry {
 	width: 100%;
-	padding: functions.rem(40) 0;
+	padding: m.rem(40) 0;
 
 	display: flex;
 
@@ -17,74 +15,27 @@
 
 masonry-vertical {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(functions.rem(248), 1fr));
-	grid-template-rows: repeat(auto-fit, minmax(functions.rem(248), 1fr));
-	row-gap: functions.rem(16);
-	column-gap: functions.rem(16);
-
-	@media (max-width: functions.rem(916)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(200), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(200), 1fr));
-
-		column-gap: functions.rem(36);
-	}
-
-	@media (max-width: functions.rem(850)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(224), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(224), 1fr));
-
-		column-gap: functions.rem(16);
-	}
-
-	@media (max-width: functions.rem(600)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(168), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(168), 1fr));
-
-		column-gap: functions.rem(8);
-	}
-
-	@media (max-width: functions.rem(500)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(148), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(148), 1fr));
-	}
-
-	@media (max-width: functions.rem(400)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(112), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(112), 1fr));
-	}
-
-	@media (max-width: functions.rem(360)) {
-		grid-template-columns: repeat(auto-fit, minmax(functions.rem(96), 1fr));
-		grid-template-rows: repeat(auto-fit, minmax(functions.rem(96), 1fr));
-	}
+	grid-template-columns: repeat(auto-fit, minmax(m.rem(248), 1fr));
+	grid-auto-rows: m.rem(12);
+	row-gap: m.rem(16);
+	column-gap: m.rem(16);
 
 	width: 100%;
 
 	masonry-brick {
 		display: flex;
-		min-width: functions.rem(248);
-		min-height: functions.rem(248);
-		border-radius: functions.rem(24);
+		border-radius: m.rem(24);
+
+		grid-row: span 10;
 
 		overflow: hidden;
-
-		@media (max-width: functions.rem(700)) {
-			min-width: functions.rem(148);
-		}
-
-		@media (max-width: functions.rem(500)) {
-			min-width: functions.rem(148);
-		}
-
-		@media (max-width: functions.rem(360)) {
-			min-width: functions.rem(112);
-		}
 
 		masonry-content {
 			display: flex;
 			flex-flow: column;
 
 			width: 100%;
+			height: 100%;
 
 			position: relative;
 
@@ -94,29 +45,27 @@ masonry-vertical {
 				object-fit: cover;
 
 				width: 100%;
-				height: auto;
-				max-height: functions.rem(300);
-				min-height: functions.rem(300);
+				height: 100%;
 			}
 
 			> .description {
 				display: flex;
 				align-items: center;
-				gap: functions.rem(12);
+				gap: m.rem(12);
 
-				padding: functions.rem(24);
+				padding: m.rem(24);
 
 				width: 100%;
 
 				position: absolute;
 				bottom: 0;
 
-				background: linear-gradient(
-					to bottom,
-					transparentize(map.get(theme.$colors, main), 1) 0%,
-					map.get(theme.$colors, main) 100%
-				);
-				backdrop-filter: blur(functions.rem(1)) saturate(1);
+				// background: linear-gradient(
+				// 	to bottom,
+				// 	transparentize(m.get(m.$colors, main), 1) 0%,
+				// 	m.get(m.$colors, main) 100%
+				// );
+				// backdrop-filter: blur(m.rem(1)) saturate(1);
 
 				transition: opacity 0ms linear 0ms;
 
@@ -125,11 +74,11 @@ masonry-vertical {
 					justify-content: center;
 					align-items: center;
 
-					padding: 0 0 0 functions.rem(2);
+					padding: 0 0 0 m.rem(2);
 
-					height: functions.rem(48);
-					width: functions.rem(48);
-					border-radius: functions.rem(12);
+					height: m.rem(48);
+					width: m.rem(48);
+					border-radius: m.rem(12);
 					overflow: hidden;
 
 					img {
@@ -146,7 +95,6 @@ masonry-vertical {
 				align-items: start;
 				justify-content: end;
 
-				max-height: functions.rem(300);
 				height: 100%;
 				width: 100%;
 				position: absolute;
@@ -164,7 +112,7 @@ masonry-vertical {
 					object-fit: cover;
 
 					width: 100%;
-					min-height: functions.rem(300);
+					min-height: 100%;
 					height: auto;
 				}
 
@@ -172,13 +120,13 @@ masonry-vertical {
 					display: flex;
 					flex-flow: column;
 					align-items: center;
-					gap: functions.rem(12);
+					gap: m.rem(12);
 
 					width: 100%;
 
 					opacity: 0;
 
-					padding: functions.rem(24);
+					padding: m.rem(24);
 
 					position: absolute;
 					bottom: -50%;
@@ -191,10 +139,10 @@ masonry-vertical {
 
 					background: linear-gradient(
 						to bottom,
-						transparentize(map.get(theme.$colors, main), 1) 0%,
-						map.get(theme.$colors, main) 90%
+						transparentize(m.get(m.$colors, main), 1) 0%,
+						m.get(m.$colors, main) 90%
 					);
-					backdrop-filter: blur(functions.rem(1)) saturate(1);
+					backdrop-filter: blur(m.rem(1)) saturate(1);
 
 					text-overflow: ellipsis;
 
@@ -202,7 +150,7 @@ masonry-vertical {
 						display: flex;
 						flex-flow: row;
 						align-items: center;
-						gap: functions.rem(12);
+						gap: m.rem(12);
 
 						width: 100%;
 					}
@@ -212,11 +160,11 @@ masonry-vertical {
 						justify-content: center;
 						align-items: center;
 
-						padding: 0 0 0 functions.rem(3);
+						padding: 0 0 0 m.rem(3);
 
-						height: functions.rem(48);
-						width: functions.rem(48);
-						border-radius: functions.rem(12);
+						height: m.rem(48);
+						width: m.rem(48);
+						border-radius: m.rem(12);
 						overflow: hidden;
 
 						img {
@@ -230,7 +178,7 @@ masonry-vertical {
 						display: flex;
 						flex-flow: row;
 						align-items: center;
-						gap: functions.rem(12);
+						gap: m.rem(12);
 
 						width: 100%;
 
@@ -271,338 +219,35 @@ masonry-vertical {
 		}
 
 		&.x2 {
-			height: functions.rem(600);
-			grid-row: span 2;
-			masonry-content {
-				> img {
-					min-height: functions.rem(600);
-				}
-				.extra {
-					min-height: functions.rem(600);
-					max-height: functions.rem(600);
-
-					> img {
-						min-height: functions.rem(600);
-					}
-
-					> .description {
-						.big-text {
-							display: flex;
-							flex-flow: row;
-							align-items: center;
-							gap: functions.rem(12);
-
-							width: 100%;
-
-							overflow: hidden;
-							max-height: 20ch;
-
-							text-overflow: ellipsis;
-
-							> * {
-								overflow: hidden;
-								max-height: 20ch;
-
-								text-overflow: ellipsis;
-							}
-						}
-					}
-				}
-			}
+			grid-row: span 20;
 		}
 		&.x3 {
-			height: functions.rem(900);
-			grid-row: span 3;
-			masonry-content {
-				> img {
-					min-height: functions.rem(900);
-				}
-				.extra {
-					min-height: functions.rem(900);
-					max-height: functions.rem(900);
-
-					> img {
-						min-height: functions.rem(900);
-					}
-				}
-			}
+			grid-row: span 30;
 		}
 
 		&.x2-horizontal {
 			grid-column: span 2;
-
-			masonry-content {
-				.extra > .description {
-					background: linear-gradient(
-						to bottom,
-						transparentize(map.get(theme.$colors, main), 1) 0%,
-						map.get(theme.$colors, main) 90%
-					);
-					backdrop-filter: blur(functions.rem(1)) saturate(1);
-				}
-			}
-
-			// masonry-content {
-			// 	img {
-			// 		min-width: functions.rem(600);
-			// 	}
-			// 	.extra {
-			// 		min-width: functions.rem(600);
-			// 	}
-			// }
 		}
 		&.x3-horizontal {
 			grid-column: span 3;
-			// masonry-content {
-			// 	img {
-			// 		min-width: functions.rem(900);
-			// 	}
-			// 	.extra {
-			// 		min-width: functions.rem(900);
-			// 	}
-			// }
 		}
 
-		@media (max-width: functions.rem(916)) {
+		@media (max-width: m.rem(916)) {
 			&.x2 {
-				grid-row: span 2;
+				grid-row: span 20;
 			}
 			&.x3 {
-				grid-row: span 2;
+				grid-row: span 20;
 			}
 			&.x2-horizontal {
 				grid-column: span 1;
-				grid-row: span 2;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
+				grid-row: span 20;
 			}
 			&.x3-horizontal {
 				grid-column: span 1;
-				grid-row: span 3;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
+				grid-row: span 30;
 			}
 		}
-
-		@media (max-width: functions.rem(850)) {
-			&.x2 {
-				grid-row: span 2;
-			}
-			&.x3 {
-				grid-row: span 2;
-			}
-			&.x2-horizontal {
-				grid-column: span 1;
-				grid-row: span 2;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
-			}
-			&.x3-horizontal {
-				grid-column: span 1;
-				grid-row: span 3;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
-			}
-		}
-
-		@media (max-width: functions.rem(600)) {
-			&.x2 {
-				grid-row: span 2;
-			}
-			&.x3 {
-				grid-row: span 2;
-			}
-			&.x2-horizontal {
-				grid-column: span 1;
-				grid-row: span 2;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
-			}
-			&.x3-horizontal {
-				grid-column: span 1;
-				grid-row: span 3;
-				height: functions.rem(600);
-
-				masonry-content {
-					> img {
-						min-height: functions.rem(600);
-					}
-					.extra {
-						min-height: functions.rem(600);
-						max-height: functions.rem(600);
-
-						> img {
-							min-height: functions.rem(600);
-						}
-					}
-				}
-			}
-		}
-
-		// @media (max-width: functions.rem(500)) {
-		// 	&.x2 {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(294446);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(444);
-		// 				max-height: functions.rem(444);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x3 {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(444);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(444);
-		// 				max-height: functions.rem(444);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x2-horizontal {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(296);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(296);
-		// 				max-height: functions.rem(296);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x3-horizontal {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(444);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(444);
-		// 				max-height: functions.rem(444);
-		// 			}
-		// 		}
-		// 	}
-		// }
-
-		// @media (max-width: functions.rem(360)) {
-		// 	&.x2 {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(224);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(224);
-		// 				max-height: functions.rem(224);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x3 {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(336);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(336);
-		// 				max-height: functions.rem(336);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x2-horizontal {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(224);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(224);
-		// 				max-height: functions.rem(224);
-		// 			}
-		// 		}
-		// 	}
-
-		// 	&.x3-horizontal {
-		// 		masonry-content {
-		// 			img {
-		// 				min-height: functions.rem(336);
-		// 			}
-		// 			.extra {
-		// 				min-height: functions.rem(336);
-		// 				max-height: functions.rem(336);
-		// 			}
-		// 		}
-		// 	}
-		// }
 
 		&.sou-mais {
 			masonry-content {
@@ -693,7 +338,7 @@ masonry-vertical {
 					}
 				}
 
-				@media (max-width: functions.rem(916)) {
+				@media (max-width: m.rem(916)) {
 					> img {
 						object-position: center;
 					}

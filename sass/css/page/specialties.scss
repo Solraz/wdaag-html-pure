@@ -1,12 +1,30 @@
-@use "sass:map";
-@use "../mixins/functions";
-@use "../mixins/theme";
+@use "../mixins/mixins" as m;
 
 banner.specialties {
-	height: max(40vh, functions.rem(396));
-	background-color: map.get(theme.$colors, main);
+	height: max(40vh, m.rem(396));
 
-	.content-wrapper {
+	> svg {
+		position: absolute;
+		z-index: 1;
+
+		height: 100%;
+		width: 100%;
+	}
+
+	> mirror {
+		position: absolute;
+		z-index: 2;
+
+		height: 100%;
+		width: 100%;
+		background-color: transparentize(m.get(m.$colors, black), 0.33);
+	}
+
+	> .content-wrapper {
+		background-color: transparent;
+
+		z-index: 3;
+
 		flex-flow: column;
 		justify-content: center;
 		align-items: center;
@@ -15,18 +33,22 @@ banner.specialties {
 		h3 {
 			font-variant: normal;
 		}
+
+		h1.h0 {
+			font-weight: 400;
+		}
 	}
 }
 
 section {
 	&.callout {
-		background-color: map.get(theme.$colors, grey);
+		background-color: m.get(m.$colors, grey);
 		text-align: center;
 
 		.content-wrapper {
 			flex-flow: column;
-			gap: functions.rem(24);
-			width: clamp(functions.rem(312), 90vw, functions.rem(960));
+			gap: m.rem(24);
+			width: clamp(m.rem(312), 90vw, m.rem(960));
 		}
 	}
 }

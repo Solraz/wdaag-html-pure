@@ -1,6 +1,4 @@
-@use "sass:map";
-@use "theme";
-@use "functions";
+@use "mixins" as m;
 
 * {
 	box-sizing: border-box;
@@ -9,8 +7,8 @@
 }
 
 body {
-	background-color: map.get(theme.$colors, main);
-	color: map.get(theme.$colors, white);
+	background-color: m.get(m.$colors, black);
+	color: m.get(m.$colors, white);
 }
 
 main {
@@ -26,34 +24,38 @@ main {
 .content-wrapper {
 	display: flex;
 
-	width: clamp(functions.rem(320), 90vw, functions.rem(1280));
+	width: clamp(m.rem(320), 90vw, m.rem(1280));
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 
 	&.bigger {
-		width: clamp(functions.rem(768), 90vw, functions.rem(1560));
+		width: clamp(m.rem(768), 90vw, m.rem(1560));
 	}
 
-	@media (min-width: functions.rem(1920)) {
-		width: clamp(functions.rem(320), 90vw, functions.rem(1440));
-
-		&.bigger {
-			width: clamp(functions.rem(320), 90vw, functions.rem(1752));
-		}
+	&.smaller {
+		width: clamp(m.rem(320), 90vw, m.rem(900));
 	}
+
+	// @media (min-width: m.rem(1920)) {
+	// 	width: clamp(m.rem(320), 90vw, m.rem(1440));
+
+	// 	&.bigger {
+	// 		width: clamp(m.rem(320), 90vw, m.rem(1752));
+	// 	}
+	// }
 }
 
-body.htmx-swapping > main > *:not(.background-wrapper-fixed) {
+body > main.htmx-swapping > *:not(.background-wrapper-fixed) {
 	opacity: 0;
 }
-body.htmx-added > main > *:not(.background-wrapper-fixed) {
+body > main.htmx-added > *:not(.background-wrapper-fixed) {
 	opacity: 0;
 }
 body > main > *:not(.background-wrapper-fixed) {
 	opacity: 1;
-	transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+	transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 [hx-get],
@@ -66,7 +68,7 @@ body > main > *:not(.background-wrapper-fixed) {
 
 	position: absolute;
 
-	background-color: map.get(theme.$colors, main);
+	background-color: m.get(m.$colors, black);
 
 	z-index: -1;
 
@@ -83,43 +85,55 @@ body > main > *:not(.background-wrapper-fixed) {
 		width: 100%;
 		height: 100%;
 
-		backdrop-filter: saturate(0.9) blur(functions.rem(75)) opacity(1);
+		backdrop-filter: saturate(0.9) blur(m.rem(55)) opacity(1);
 	}
 
 	.content {
 		position: absolute;
+		right: 0;
 
 		z-index: 1;
-
-		width: 100%;
-		height: 100%;
 
 		animation: background-fade-in 2500ms ease-out;
 		animation-fill-mode: forwards;
 
-		img {
+		svg {
 			position: absolute;
+			z-index: 5;
+
+			top: m.rem(200);
+			right: 7.5%;
+
+			width: 100%;
+			height: 100%;
+
+			animation: rotate-blob-1 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				infinite;
+		}
+
+		img {
+			position: relative;
 
 			object-fit: cover;
-			width: functions.rem(600);
+			width: m.rem(600);
 			height: auto;
 
 			&:nth-of-type(1) {
 				// transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
-				top: functions.rem(200);
+				top: m.rem(200);
 				right: 7.5%;
 
 				// animation: rotate-blob-1 5000ms linear infinite;
 				// animation-fill-mode: forwards;
 
-				animation: blob-breathe 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				animation: rotate-blob-1 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
 					infinite;
 			}
 
 			&:nth-of-type(2) {
 				display: none;
 				right: 7.5%;
-				top: functions.rem(650);
+				top: m.rem(650);
 
 				@media (max-width: 700px) {
 					right: unset;
@@ -129,7 +143,7 @@ body > main > *:not(.background-wrapper-fixed) {
 				// animation: rotate-blob-2 5000ms linear infinite;
 				// animation-fill-mode: both;
 
-				animation: blob-breathe 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				animation: rotate-blob-1 5000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
 					infinite;
 			}
 		}
@@ -147,13 +161,13 @@ body > main > *:not(.background-wrapper-fixed) {
 
 @keyframes rotate-blob-1 {
 	0% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
 	}
 	50% {
 		transform: rotate3d(0, 1, 0, -7deg) scale3d(1.1, 1.1, 1.1);
 	}
 	100% {
-		transform: rotate3d(0, 0, 1, 0deg) scale3d(0.8, 0.8, 0.8);
+		transform: rotate3d(0, 0, 1, 0deg) scale3d(1, 1, 1);
 	}
 }
 
@@ -171,13 +185,13 @@ body > main > *:not(.background-wrapper-fixed) {
 
 @keyframes blob-breathe {
 	0% {
-		transform: scale(0.8);
+		transform: scale(1);
 	}
 	50% {
 		transform: scale(1.1);
 	}
 	100% {
-		transform: scale(0.8);
+		transform: scale(1);
 	}
 }
 
@@ -231,37 +245,37 @@ divider-horizontal {
 	display: flex;
 
 	width: 100%;
-	height: functions.rem(3);
-	background-color: map.get(theme.$colors, white);
+	height: m.rem(2);
+	background-color: m.get(m.$colors, primary);
 }
 
 button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: functions.rem(15);
+	gap: m.rem(15);
 
-	padding: functions.rem(12) functions.rem(25);
+	padding: m.rem(12) m.rem(25);
 
-	background-color: map.get(theme.$colors, primary);
-	border: functions.rem(1) solid map.get(theme.$colors, primary);
-	color: map.get(theme.$colors, white);
+	background-color: m.get(m.$colors, primary);
+	border: m.rem(1) solid m.get(m.$colors, primary);
+	color: m.get(m.$colors, white);
 
 	cursor: pointer;
 
 	transition: background-color 125ms ease-in-out;
 
 	&:hover {
-		background-color: darken(map.get(theme.$colors, primary), 2.5%);
+		background-color: darken(m.get(m.$colors, primary), 2.5%);
 	}
 }
 
 mark {
-	background-color: map.get(theme.$colors, primary);
-	color: map.get(theme.$colors, white);
-	padding: functions.rem(0) functions.rem(5) functions.rem(4);
+	background-color: m.get(m.$colors, primary);
+	color: m.get(m.$colors, white);
+	padding: m.rem(0) m.rem(5) m.rem(4);
 }
 
 ::marker {
-	color: map.get(theme.$colors, primary);
+	color: m.get(m.$colors, primary);
 }
