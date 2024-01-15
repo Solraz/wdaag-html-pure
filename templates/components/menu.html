@@ -3,7 +3,7 @@
 
   <div class="content-wrapper bigger">
     <img hx-post="{{ get_url(path='/') }}" hx-trigger="click throttle:250ms" hx-target="main"
-      hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true"
+      hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true"
       src="{{ get_url(path='img/wda-logo-light.svg') }}" alt="Logo Agência Digital WDA.AG">
 
     <div class="opener">

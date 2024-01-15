@@ -46,16 +46,21 @@ main {
 	// 	}
 	// }
 }
+body {
+	> main {
+		opacity: 1;
+		transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-body > main.htmx-swapping > *:not(.background-wrapper-fixed) {
-	opacity: 0;
-}
-body > main.htmx-added > *:not(.background-wrapper-fixed) {
-	opacity: 0;
-}
-body > main > *:not(.background-wrapper-fixed) {
-	opacity: 1;
-	transition: opacity 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+		&.htmx-swapping {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+
+		&.htmx-settling {
+			opacity: 0;
+			transition: opacity 250ms ease-out, transform 250ms ease-in;
+		}
+	}
 }
 
 [hx-get],

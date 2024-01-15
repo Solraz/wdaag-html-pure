@@ -20,7 +20,6 @@ callout_sub = ""
     <p>Nossa abordagem personalizada leva em consideração suas metas e objetivos específicos, garantindo que a arquitetura de informação seja adaptada às suas necessidades. Trabalharemos em estreita colaboração com você para entender seu negócio, público-alvo e concorrência, a fim de criar uma estratégia abrangente de arquitetura de informação que impulsione seu sucesso digital.</p>
   </div>
 """]
-2banner_bg = "/ux-ui-design/arquitetura-de-informacao-2.webp"
 
 
 sticky = [[["h2", "Metodologia e processos projetados para serem simples e eficientes."],

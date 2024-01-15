@@ -10,7 +10,6 @@ callout = "Alavanque o sucesso do seu negócio com o poder do tráfego pago! Aum
 callout_sub = ""
 
 2banner = "Resultados reais"
-2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
 2banner_items = [
   """
   <div class="item">

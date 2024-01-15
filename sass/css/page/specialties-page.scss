@@ -2,24 +2,10 @@
 
 .specialties-content {
 	background-color: m.get(m.$colors, white);
-	color: m.get(m.$colors, main);
+	color: m.get(m.$colors, black);
 
 	section {
 		padding: m.rem(48) m.rem(12) m.rem(48);
-
-		p,
-		div,
-		li {
-			font-weight: 400;
-		}
-
-		h2 {
-			font-weight: 500;
-		}
-
-		h3 {
-			font-weight: 400;
-		}
 
 		&.callout-page {
 			background-color: m.get(m.$colors, white);
@@ -110,6 +96,10 @@
 			text-align: center;
 			padding: m.rem(64) 0;
 
+			h2 {
+				font-weight: 500;
+			}
+
 			divider-horizontal {
 				background-color: m.get(m.$colors, primary);
 				width: m.rem(192);
@@ -158,11 +148,11 @@
 
 			mark {
 				background-color: m.get(m.$colors, white);
-				color: m.get(m.$colors, main);
+				color: m.get(m.$colors, black);
 			}
 
 			::marker {
-				color: m.get(m.$colors, white);
+				color: m.get(m.$colors, primary);
 			}
 
 			ul {
@@ -203,6 +193,18 @@
 					@media (max-width: m.rem(1304)) {
 						width: min(100%, m.rem(600));
 					}
+
+					&.smaller {
+						width: max(calc(25% - m.rem(24)), m.rem(192));
+					}
+
+					&.bigger {
+						width: max(calc(50% - m.rem(24)), m.rem(312));
+					}
+
+					h3 {
+						font-weight: 600;
+					}
 				}
 			}
 		}
@@ -229,12 +231,39 @@
 		}
 
 		&.sales-pitch {
+			&.sales-pitch-background {
+				padding: m.rem(84) 0;
+
+				background-color: m.get(m.$colors, black);
+				color: m.get(m.$colors, white);
+
+				& .sticky,
+				& .sales-body {
+					h1,
+					h2,
+					h3,
+					h4 {
+						color: m.get(m.$colors, white);
+					}
+
+					ul {
+						gap: m.rem(36);
+					}
+				}
+			}
+
+			divider-horizontal {
+				background-color: m.get(m.$colors, primary);
+				width: m.rem(120);
+				height: m.rem(1);
+			}
+
 			.content-wrapper {
 				flex-flow: row;
 				flex-wrap: wrap;
 				align-items: start;
 				justify-content: center;
-				gap: m.rem(24);
+				gap: m.rem(48);
 
 				position: relative;
 
@@ -260,6 +289,16 @@
 					top: 0;
 				}
 
+				h1 {
+					color: m.get(m.$colors, grey-darker);
+					font-weight: 400;
+				}
+
+				h2 {
+					color: m.get(m.$colors, grey-darker);
+					font-weight: 400;
+				}
+
 				h3 {
 					color: m.get(m.$colors, primary);
 					font-weight: 500;
@@ -271,7 +310,22 @@
 				flex-flow: column;
 				gap: m.rem(24);
 
+				strong {
+					font-weight: 700;
+				}
+
+				h1 {
+					color: m.get(m.$colors, grey-darker);
+					font-weight: 400;
+				}
+
+				h2 {
+					color: m.get(m.$colors, grey-darker);
+					font-weight: 400;
+				}
+
 				h3 {
+					color: m.get(m.$colors, grey-darker);
 					font-weight: 500;
 				}
 			}
@@ -289,6 +343,21 @@
 
 			margin-left: m.rem(12);
 			margin-bottom: m.rem(24);
+
+			li {
+				strong {
+					color: m.get(m.$colors, grey-darker);
+					font-weight: 700;
+				}
+
+				h3 {
+					margin-bottom: m.rem(6);
+				}
+
+				h4 {
+					margin-bottom: m.rem(3);
+				}
+			}
 		}
 
 		accordion {
@@ -364,6 +433,8 @@
 		background-color: m.get(m.$colors, main);
 		color: m.get(m.$colors, white);
 
+		padding: m.rem(36) 0;
+
 		.background {
 			z-index: 0;
 
@@ -425,26 +496,33 @@
 					z-index: 2;
 				}
 			}
-		}
 
-		p,
-		div,
-		li {
-			font-weight: 400;
-		}
+			&.background-with-video {
+				.mirror {
+					backdrop-filter: blur(m.rem(12)) opacity(1);
+					background-color: transparentize(m.get(m.$colors, main), 0.5);
+				}
 
-		h2 {
-			font-weight: 500;
-		}
+				img {
+					position: absolute;
+					width: 100%;
 
-		h3 {
-			font-weight: 400;
+					background-color: m.get(m.$colors, main);
+				}
+
+				+ div {
+					background-color: transparent;
+					z-index: 2;
+				}
+			}
 		}
 
 		divider-horizontal {
 			background-color: m.get(m.$colors, primary);
-			width: m.rem(200);
+			width: m.rem(192);
 			height: m.rem(1);
+
+			margin: m.rem(-12) 0;
 		}
 
 		> .content-wrapper {
@@ -456,6 +534,11 @@
 			height: auto;
 		}
 
+		.callout {
+			@include m.flex;
+			flex-flow: column;
+		}
+
 		&.has-images {
 			background-color: black;
 
@@ -465,6 +548,24 @@
 
 					&.bigger {
 						width: max(calc(50% - m.rem(24)), m.rem(312));
+					}
+
+					&.list {
+						text-align: start;
+						justify-content: start;
+						align-items: start;
+
+						ul {
+							@include m.flex;
+							align-items: start;
+							flex-flow: column;
+							gap: m.rem(36);
+
+							divider-horizontal {
+								margin-top: m.rem(24);
+								margin-bottom: m.rem(12);
+							}
+						}
 					}
 
 					img {
@@ -497,6 +598,10 @@
 
 				width: max(calc(33% - m.rem(24)), m.rem(312));
 
+				&.bigger {
+					width: max(calc(50% - m.rem(24)), m.rem(312));
+				}
+
 				@media (max-width: m.rem(1304)) {
 					width: 100%;
 				}
@@ -507,10 +612,20 @@
 	banner.final-callout {
 		background-color: m.get(m.$colors, white);
 
+		divider-horizontal {
+			background-color: m.get(m.$colors, primary);
+			width: m.rem(192);
+			height: m.rem(1);
+		}
+
 		p,
 		div,
 		li {
 			font-weight: 400;
+		}
+
+		h1 {
+			color: m.get(m.$colors, grey-darker);
 		}
 
 		h2 {

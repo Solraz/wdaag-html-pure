@@ -82,19 +82,19 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		align-items: start;
+		align-items: center;
 		width: 100%;
 
 		padding: m.rem(24) 0;
 
-		gap: m.rem(12);
+		gap: m.rem(24);
 
 		h2 {
 			text-align: end;
 			color: m.get(m.$colors, primary);
 
-			&.h0 {
-				line-height: 0.75;
+			&.h1 {
+				line-height: 0.7;
 			}
 		}
 

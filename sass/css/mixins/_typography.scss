@@ -63,13 +63,13 @@ $sizes: m.get(m.$fonts, sizes);
 			$size: m.get($sizes, h#{$i});
 
 			$sizemin: calc($size * 0.9) + rem;
-			$sizevw: $size * 1 + vw;
+			$sizevw: $size * 2 + vw;
 			$fluid: calc($sizevw + ($sizemin * 1));
 			$sizemax: calc($size * 1) + rem;
 
 			font-size: clamp($sizemin, $fluid, $sizemax);
-			line-height: clamp($sizemin * 1.1, $fluid * 1.5, $sizemax * 1.33);
-			letter-spacing: calc(-0.005 * $size) + rem;
+			line-height: clamp($sizemin * 1.25, $fluid * 1.66, $sizemax * 1.66);
+			letter-spacing: calc(0.075 * $size) + rem;
 
 			font-weight: 300;
 		}

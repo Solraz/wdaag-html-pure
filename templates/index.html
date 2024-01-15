@@ -44,25 +44,26 @@
     <div class="content">
       <div class="card">
         <h1 class="title" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
-          hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Marketing Digital</h1>
+          hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Marketing Digital</h1>
         <p class="text">Mais do que uma agência digital, nossa proposta é atuar como o time de marketing do seu negócio.
           Entregamos soluções estratégicas e integradas para ambientes online e offline.</p>
 
         <div class="leads">
           <h4 hx-post="{{ get_url(path='/marketing/assessoria-de-marketing-digital') }}"
-            hx-trigger="click throttle:250ms" hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main"
-            hx-push-url="true">
+            hx-trigger="click throttle:250ms" hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms"
+            hx-select="main" hx-push-url="true">
             Assessoria de Marketing Digital</h4>
           <h4 hx-post="{{ get_url(path='/marketing/social-media-marketing') }}" hx-trigger="click throttle:250ms"
-            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Social Media Marketing
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Social
+            Media Marketing
           </h4>
           <h4 hx-post="{{ get_url(path='/marketing/trafego-pago') }}" hx-trigger="click throttle:250ms" hx-target="main"
-            hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Tráfego Pago</h6>
+            hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Tráfego Pago</h6>
         </div>
       </div>
       <div class="card">
         <h1 class="title" hx-post="{{ get_url(path='/design') }}" hx-trigger="click throttle:250ms" hx-target="main"
-          hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Design</h1>
+          hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Design</h1>
         <p class="text">Somos um estúdio de criação especializado em comunicação visual, ilustração e projetos gráficos
           2D
           e
@@ -70,44 +71,59 @@
 
         <div class="leads">
           <h4 hx-post="{{ get_url(path='/design/identidade-visual') }}" hx-trigger="click throttle:250ms"
-            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Identidade Visual</h4>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Identidade
+            Visual</h4>
           <h4 hx-post="{{ get_url(path='/design/comunicacao-visual') }}" hx-trigger="click throttle:250ms"
-            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Comunicação Visual</h4>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Comunicação
+            Visual</h4>
           <h4 hx-post="{{ get_url(path='/design/design-de-embalagem') }}" hx-trigger="click throttle:250ms"
-            hx-target="main" hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Design de Embalagem</h4>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Design de
+            Embalagem</h4>
           <h4 hx-post="{{ get_url(path='/design/ilustracao') }}" hx-trigger="click throttle:250ms" hx-target="main"
-            hx-swap="outerHTML swap:250ms" hx-select="main" hx-push-url="true">Ilustração</h4>
+            hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Ilustração</h4>
         </div>
       </div>
       <div class="card">
         <h1 class="title" hx-post="{{ get_url(path='/ux-ui-design') }}" hx-trigger="click throttle:250ms"
-          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">UX / UI Design</h1>
+          hx-target="body" hx-swap="outerHTML swap:250ms settle:250ms" hx-push-url="true">UX / UI Design</h1>
         <p class="text">Desenvolvemos ambientes e produtos através do estudo da usabilidade e experiência do usuário
           final.<br />
           Planejamos soluções e interações que promovem engajamento, conexão e conversão.</p>
 
         <div class="leads">
           <h4 hx-post="{{ get_url(path='/ux-ui-design/arquitetura-de-informacao') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Arquitetura de Informação</h4>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Arquitetura
+            de Informação
+          </h4>
           <h4 hx-post="{{ get_url(path='/ux-ui-design/design-de-interface') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Design de Interface</h4>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Design de
+            Interface</h4>
           <h4 hx-post="{{ get_url(path='/ux-ui-design/estrategia-de-conteudo') }}" hx-trigger="click throttle:250ms"
-            hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Estratégia de Conteúdo</p>
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Estratégia
+            de Conteúdo</p>
         </div>
       </div>
       <div class="card">
         <h1 class="title" hx-post="{{ get_url(path='/desenvolvimento') }}" hx-trigger="click throttle:250ms"
-          hx-target="body" hx-swap="multi:body swap:250ms" hx-push-url="true">Desenvolvimento</h1>
+          hx-target="body" hx-swap="outerHTML swap:250ms settle:250ms" hx-push-url="true">Desenvolvimento</h1>
         <p class="text">Materializamos as suas ideias. <br />
           Seja um e-commerce, um site ou aplicativo, nossa equipe atuará no planejamento, na concepção e no
           desenvolvimento
           através de metodologias ágeis e emergentes.</p>
 
         <div class="leads">
-          <h4>Criação de Sites</h4>
-          <h4>Landing Pages</h4>
-          <h4>E-Commerce</h4>
-          <h4>Criação de Aplicativos</h4>
+          <h4 hx-post="{{ get_url(path='/desenvolvimento/criacao-de-sites') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Criação de
+            Sites</h4>
+          <h4 hx-post="{{ get_url(path='/desenvolvimento/landing-pages') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Landing
+            Pages</h4>
+          <h4 hx-post="{{ get_url(path='/desenvolvimento/e-commerce') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">E-Commerce
+          </h4>
+          <h4 hx-post="{{ get_url(path='/desenvolvimento/criacao-de-aplicativos') }}" hx-trigger="click throttle:250ms"
+            hx-target="main" hx-swap="outerHTML swap:250ms settle:250ms" hx-select="main" hx-push-url="true">Criação de
+            Aplicativos</h4>
         </div>
       </div>
     </div>
@@ -117,7 +133,7 @@
 <div class="wdaag">
   <div class="content-wrapper smaller">
     <div class="header">
-      <h2 class="h0">#wda</br>ag</h2>
+      <h2 class="h1">#wda</br>ag</h2>
       <h3>Combinamos <strong>inovação e tecnologia</strong> com profundo conhecimento de mídia moderna, cultura
         contemporânea e dados
         do cliente, para contar histórias que conectam marcas e consumidores.</h3>

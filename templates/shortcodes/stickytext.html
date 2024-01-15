@@ -3,7 +3,7 @@
 {% endif %}
 
 {% set number = nth - 1 %}
-<section class="sales-pitch">
+<section class="sales-pitch {% if has_background %} sales-pitch-background {% endif %}">
   <div class="content-wrapper">
     <div class="sticky">
       {% for sticky in section.extra.sticky[number] %}
@@ -30,7 +30,7 @@
 
       {% if sticky is iterable %}
 
-      <{{sticky[0]}}>{{sticky[1]}}</{{sticky[0]}}>
+      <{{sticky[0]}}>{{sticky[1] | safe}}</{{sticky[0]}}>
 
       {% endif %}
 

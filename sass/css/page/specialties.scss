@@ -44,6 +44,8 @@ section {
 	&.callout {
 		background-color: m.get(m.$colors, grey);
 		text-align: center;
+		justify-content: center;
+		align-items: center;
 
 		.content-wrapper {
 			flex-flow: column;

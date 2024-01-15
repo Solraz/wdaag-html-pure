@@ -4,7 +4,7 @@
 
 <banner class="inner-banner {% if has_items %}has-items{% endif %}{% if has_images %} has-images{% endif %}">
   {% if section.extra.2banner_bg %}
-  <div class="background background-with-image">
+  <div class="background background-with-image more-parallax">
     {% include "components/gradient-specialties.html" %}
     <div class="mirror"></div>
     <div class="content parallax">
@@ -16,7 +16,7 @@
   <div class="background background-with-video">
     {% include "components/gradient-specialties.html" %}
     <div class="mirror"></div>
-    <div class="content parallax more-parallax">
+    <div class="content parallax">
       <video class="" src="{{ section.extra.2banner_video }}" autoplay muted loop></video>
     </div>
   </div>
@@ -24,14 +24,20 @@
   <div class="content-wrapper">
     <div class="callout">
       <h1>{{ section.extra.2banner | safe }}</h1>
+      {% if section.extra.2banner_extra_small %}
+      <divider-horizontal></divider-horizontal>
+      {{ section.extra.2banner_extra_small | safe }}
+      {% endif %}
+      {% if section.extra.2banner_extra %}
+      <divider-horizontal></divider-horizontal>
+      <h3>{{ section.extra.2banner_extra | safe }}</h3>
+      {% endif %}
       {% if section.extra.2banner_items %}
       <div class="items">
         {% for item in section.extra.2banner_items %}
         {{item | safe}}
         {% endfor %}
       </div>
-      {% else %}
-      <h3>{{ section.extra.2banner_extra | safe }}</h3>
       {% endif %}
     </div>
   </div>

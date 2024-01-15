@@ -15,7 +15,7 @@
     <div class="sales-body">
       {% for item in section.extra.content_items[number] %}
 
-      <div class="item">{{item | safe}}</div>
+      <div class="item {% if smaller %} smaller {% endif %} {% if bigger %} bigger {% endif %}">{{item | safe}}</div>
 
       {% endfor %}
     </div>

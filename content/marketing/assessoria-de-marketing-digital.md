@@ -10,7 +10,6 @@ callout = "Somos uma agência de marketing e criação especializada em planejam
 callout_sub = "<h3>Tenha uma equipe completa, <strong>da estratégia a criação</strong>, atuando no crescimento do seu negócio.</h3>"
 
 2banner = "Alcance os resultados desejados"
-2banner_extra = "Entre em contato conosco, receba uma avaliação gratuita e descubra como nossa <mark>Assessoria de Marketing Digital</mark> pode impulsionar o sucesso do seu negócio."
 2banner_items = [
   """
   <div class="item">

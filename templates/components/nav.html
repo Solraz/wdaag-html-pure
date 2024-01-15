@@ -2,7 +2,7 @@
   {% include "components/gradient-nav.html" %}
   <div class="content-wrapper bigger">
     <a class="h0" hx-post="{{ get_url(path='/') }}" hx-trigger="click throttle:250ms" hx-target="main" hx-select="main"
-      hx-swap="outerHTML">cases</a>
+      hx-swap="outerHTML swap:250ms settle:250ms">cases</a>
     <a class="h0" hx-post="{{ get_url(path='/marketing') }}" hx-trigger="click throttle:250ms" hx-target="main"
       hx-select="main" hx-swap="outerHTML">o que
       fazemos</a>
